@@ -1,11 +1,11 @@
 import React, { Fragment, Component } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
-import Rating from 'react-rating';
 import Footer from './Footer';
 import { Grid, Column } from './Grid';
 import Container from './Container';
 import Header from './Header';
+import Modal from './Modal';
 
 const SinglePageStyle = styled.div`
   margin: 50px 0;
@@ -31,10 +31,7 @@ const SinglePageStyle = styled.div`
     &::after{
       content: ')';
     }
-    button{
-      width: auto;
-      margin: 0 5px;
-    }
+    
   }
 `;
 
@@ -77,7 +74,6 @@ class SinglePage extends Component {
                   <Column columns="2">
                     <section>
                       <h1>{meal.fields.Name}</h1>
-                      <Rating initialRating={meal.fields.Rating} />
                   
                     </section>
                   </Column>
@@ -96,8 +92,7 @@ class SinglePage extends Component {
                       </ul>
                       <h3>Description</h3>
                       <p>{meal.fields.Description}</p>
-
-                      <button>Order Now</button>
+                      <a href="#0" class="button">Order</a>
                     </section>
                   </Column>
                 </Grid>

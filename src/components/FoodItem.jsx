@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Rating from 'react-rating';
 
 const FoodItemStyle = styled.div`
   height: 320px;
@@ -30,12 +29,11 @@ const FoodItemStyle = styled.div`
   }
 `;
 
-const FoodItem = ({ children, rating, image }) => (
+const FoodItem = ({ children, image }) => (
   <FoodItemStyle>
     <img src={image || 'http://placehold.it/200'} alt="Food item" />
     <div>
       {children}
-      <h5><Rating initialRating={rating} /></h5>
     </div>
   </FoodItemStyle>
 );

@@ -5,43 +5,11 @@ import axios from 'axios';
 const Formstyle = styled.form`
   margin-top:1.8em;
 
-  input{
-    height: 40px;
-    margin: 5px 0;
-    border: 0;
-    border-radius: var(--border-radius);
-    font: inherit;
-    padding: 10px;
-    width: 100%;
-  }
-
-  button{
-    display: inline-block;
-    width: 100%;
-    height: 40px;
-    margin: 10px 0;
-    background: var(--color-brand-1);
-    border:none;
-    border-radius: var(--border-radius);
-    color: red;
-    font: inherit;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 10px;
-  }
   @media(min-width: 720px) {
     input{
       width: 200px;
       margin: 0 5px;
     }
-    button{
-      width: auto;
-      margin: 0 5px;
-    }
-    .Logo {
-      background-image: url(./logo.png);
-  
-  }
 `;
 
 class Form extends Component {
@@ -49,11 +17,8 @@ class Form extends Component {
     super();
     this.state = {
       mealName: '',
-      ratings: 0,
     };
-    this.createMeal = this.createMeal.bind(this);
     this.inputName = this.inputName.bind(this);
-    this.inputRating = this.inputRating.bind(this);
   }
   createMeal(event) {
     event.preventDefault();
@@ -64,7 +29,6 @@ class Form extends Component {
       data: {
         fields: {
           Name: this.state.mealName,
-          Rating: Number(this.state.ratings),
         }
       }
     }).then(response => {
@@ -78,15 +42,11 @@ class Form extends Component {
       mealName: event.target.value,
     })
   }
-  inputRating(event) {
-    this.setState({
-      ratings: event.target.value,
-    })
-  }
+
   render() {
     return (
       <div>
-        <button id="SignIn"></button>
+        <button id=""></button>
       </div>
     );
   }
