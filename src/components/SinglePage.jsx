@@ -5,7 +5,7 @@ import Footer from './Footer';
 import { Grid, Column } from './Grid';
 import Container from './Container';
 import Header from './Header';
-import Modal from './Modal';
+
 
 const SinglePageStyle = styled.div`
   margin: 50px 0;
@@ -105,5 +105,6 @@ class SinglePage extends Component {
     );
   }
 }
+
 
 export default SinglePage;

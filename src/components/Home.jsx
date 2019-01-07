@@ -10,15 +10,8 @@ import Container from './Container';
 import Form from './Form';
 import currencyFormater from 'currency-formatter';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import Navbar from './Navbar';
 import logo from './logo_transparent.png';
 
-
-export const Food = () => (
-  <div>
-    Favorite Food: <FontAwesomeIcon icon="igloo" />
-  </div>
-)
 
 const HomeStyle = styled.div`
   header, footer{
@@ -33,13 +26,15 @@ const HomeStyle = styled.div`
 `;
 
 const Header = styled.header`
-  padding: 100px 20px;
+  padding: 80px 20px;
   background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(${FoodBg});
   background-size: cover;
   background-position: center;
   color: #fff;
   margin-top: 0px;
 `;
+
+
 
 class Home extends Component {
   constructor() {
@@ -68,7 +63,6 @@ class Home extends Component {
     const { meals, ready } = this.state;
     return (
       <div>
-        <Navbar />
         <HomeStyle>        
           <Header>
             <img style={{width: '250px', height: '250px'}} src={logo} alt ="" />
@@ -76,10 +70,11 @@ class Home extends Component {
             <Form />
           </Header>
           <main>
+            <h1> MENU </h1>
             <Container>
               <Grid>
                 {meals.length ? '' : ''}
-                {ready === 'loading' ? 'loading_icon.gif' : ''}
+                {ready === 'loading' ? 'Loading...' : ''}
                 {meals.map(meal => (
                   <Column columns="3" key={meal.id}>
                     <FoodItem image={meal.fields.Icon ? meal.fields.Icon[0].url : ''} >
