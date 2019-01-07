@@ -54,7 +54,6 @@ const Footer = () => (
 
       <div className="footer-contact">
         <h4>Contact Us</h4>
-        <i class="fab fa-instagram"></i>
         <p>Lorem ipsum dolor sit amet, </p>
         <p>consectetur adipisicing </p>
         <p>elit, sed do eiusmod tempor </p>

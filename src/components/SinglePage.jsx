@@ -5,6 +5,7 @@ import Footer from './Footer';
 import { Grid, Column } from './Grid';
 import Container from './Container';
 import Header from './Header';
+import swal from 'sweetalert';
 
 
 const SinglePageStyle = styled.div`
@@ -38,11 +39,23 @@ const SinglePageStyle = styled.div`
 class SinglePage extends Component {
   constructor(props) {
     super(props);
+    this.sweetalertfunction = this.sweetalertfunction.bind(this),
     this.state = {
       meal: {},
       ready: 'initial',
     }
   }
+  
+  sweetalertfunction () {
+    console.log('button clicks');
+    swal("Please fill in address for delivery:", {
+      content: "input",
+    })
+    .then((value) => {
+      swal("Thank you!", "Your order has been placed", "success");
+    });
+  }
+
   componentDidMount() {
     const { match : { params } } = this.props;
     const id = params.id;
@@ -92,7 +105,9 @@ class SinglePage extends Component {
                       </ul>
                       <h3>Description</h3>
                       <p>{meal.fields.Description}</p>
-                      <a href="#0" class="button">Order</a>
+                      <button onClick = {this.sweetalertfunction}>
+                        <span> Order Now</span>
+                      </button>
                     </section>
                   </Column>
                 </Grid>

@@ -23,6 +23,11 @@ const HomeStyle = styled.div`
   span {
     display: block;
 }
+.menu {
+  background-color: #EA2027;
+  color: #f1c40f;
+  padding: 10px;
+  margin-top: -40px;
 `;
 
 const Header = styled.header`
@@ -41,7 +46,7 @@ class Home extends Component {
     super();
     this.state = {
       meals: [],
-      ready: 'initial',
+      ready: 'initial',     
     };
   }
   componentDidMount() {
@@ -70,7 +75,7 @@ class Home extends Component {
             <Form />
           </Header>
           <main>
-            <h1> MENU </h1>
+            <h1 align="center" class="menu">Menu</h1>
             <Container>
               <Grid>
                 {meals.length ? '' : ''}
