@@ -48,7 +48,7 @@ class SinglePage extends Component {
   
   sweetalertfunction () {
     console.log('button clicks');
-    swal("Please fill in address for delivery:", {
+    swal("Please enter delivery address:", {
       content: "input",
     })
     .then((value) => {

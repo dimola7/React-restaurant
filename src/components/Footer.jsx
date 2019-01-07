@@ -36,6 +36,7 @@ const Foot = styled.footer`
  const Year= new Date().getFullYear();
 
 const Footer = () => (
+  
   <Foot>
     <div className="footergrid">
 

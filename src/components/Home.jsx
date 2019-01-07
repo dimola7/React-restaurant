@@ -8,8 +8,6 @@ import FoodItem from './FoodItem';
 import Footer from './Footer';
 import Container from './Container';
 import Form from './Form';
-import currencyFormater from 'currency-formatter';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import logo from './logo_transparent.png';
 
 
