@@ -62,7 +62,7 @@ class SinglePage extends Component {
     this.setState({ ready: 'loading' });
     axios({
       method: 'get',
-      url: `${process.env.HOST}/Cuisines/${id}`,
+      url: `${process.env.HOST}/${id}`,
       headers: { Authorization: `Bearer ${process.env.API_KEY}` },
     }).then(({ data }) => {
       this.setState({
