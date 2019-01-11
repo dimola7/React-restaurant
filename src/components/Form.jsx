@@ -24,8 +24,8 @@ class Form extends Component {
     event.preventDefault();
     axios({
       method: 'post',
-      url: `${process.env.HOST}/Cuisines`,
-      headers: { Authorization: `Bearer ${process.env.API_KEY}` },
+      url: `https://api.airtable.com/v0/app0s53GIQZBB0T5d`,
+      headers: { Authorization: `Bearer keyhAAqvSVG6kZeVZ` },
       data: {
         fields: {
           Name: this.state.mealName,
