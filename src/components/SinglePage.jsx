@@ -62,8 +62,8 @@ class SinglePage extends Component {
     this.setState({ ready: 'loading' });
     axios({
       method: 'get',
-      url: `${process.env.HOST}/Cuisines/${id}`,
-      headers: { Authorization: `Bearer ${process.env.API_KEY}` },
+      url: `https://api.airtable.com/v0/app0s53GIQZBB0T5d/Cuisines/${id}`,
+      headers: { Authorization: `Bearer keyhAAqvSVG6kZeVZ` },
     }).then(({ data }) => {
       this.setState({
         meal: data,
