@@ -92,6 +92,7 @@ class Home extends Component {
         </HomeStyle>
       </div>
     );
+    ReactDOM.render(element, document.getElementById('root'));
   }
 } 
 
