@@ -3,6 +3,8 @@
   "main": "src/index.js",
   "scripts": {
     "start": "webpack-dev-server",
+    "build-dev": "dotenv -e .env.development",
+    "build-prod": "dotenv -e .env",
     "build": "webpack",
     "test": "jest"
   },
