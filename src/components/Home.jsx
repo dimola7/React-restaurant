@@ -73,7 +73,7 @@ class Home extends Component {
             <Form />
           </Header>
           <main>
-            <h1 align="center" class="menu">Menu</h1>
+            <h1 align="center" className="menu">Menu</h1>
             <Container>
               <Grid>
                 {meals.length ? '' : ''}
