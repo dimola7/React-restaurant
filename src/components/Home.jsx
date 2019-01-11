@@ -53,8 +53,8 @@ class Home extends Component {
     });
     axios({
       method: 'get',
-      url: `https://api.airtable.com/v0/app0s53GIQZBB0T5d/Cuisines`,
-      headers: {Authorization: `Bearer keyhAAqvSVG6kZeVZ`},
+      url: `${process.env.HOST}/Cuisines`,
+      headers: {Authorization: `Bearer ${process.env.API_KEY}`},
     }).then(({ data: { records } }) => {
       this.setState({
         ready: 'loaded',

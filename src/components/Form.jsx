@@ -24,7 +24,7 @@ class Form extends Component {
     event.preventDefault();
     axios({
       method: 'post',
-      // url: `${process.env.HOST}/Cuisines`,
+      url: `${process.env.HOST}/Cuisines`,
       headers: { Authorization: `Bearer ${process.env.API_KEY}` },
       data: {
         fields: {
