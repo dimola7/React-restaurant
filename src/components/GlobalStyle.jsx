@@ -10,7 +10,7 @@ const GlobalStyle = createGlobalStyle`
   }
   body{
     margin: 0;
-    font-family: 'Londrina Solid', cursive;
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
   }
   a {
