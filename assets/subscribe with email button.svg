@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="394.497" height="47.843" viewBox="0 0 394.497 47.843">
+  <g id="Group_381" data-name="Group 381" transform="translate(0 -126.046)">
+    <g id="Required_Field" data-name="Required Field" transform="translate(0 126.046)">
+      <path id="Path_201" data-name="Path 201" d="M0-.562,251.044.067V47.256L0,47.105V-.562Z" transform="translate(0 0.562)" fill="#eaeaea"/>
+      <text id="Email_Address" data-name="Email Address" transform="translate(23.909 27.768)" fill="#fe5a43" font-size="14" font-family="ArialMT, Arial"><tspan x="0" y="0">Email Address</tspan></text>
+    </g>
+    <g id="Symbol_48_1" data-name="Symbol 48 – 1" transform="translate(251.033 126.717)">
+      <path id="Path_202" data-name="Path 202" d="M0,0H143.455V47.171H-.009Z" transform="translate(0.009)" fill="#ffba48"/>
+      <text id="SUBSCRIBE" transform="translate(67.31 28.541)" fill="#fe5a43" font-size="14" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="-41.228" y="0">SUBSCRIBE</tspan></text>
+    </g>
+  </g>
+</svg>

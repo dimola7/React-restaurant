@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="442.756" height="87.899" viewBox="0 0 442.756 87.899">
+  <defs>
+    <filter id="Path_203" x="0" y="0" width="442.756" height="87.899" filterUnits="userSpaceOnUse">
+      <feOffset dx="1" dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_383" data-name="Group 383" transform="translate(-640.846 -5006.366)">
+    <g transform="matrix(1, 0, 0, 1, 640.85, 5006.37)" filter="url(#Path_203)">
+      <g id="Path_203-2" data-name="Path 203" transform="translate(3.5 2.5)" fill="#fff">
+        <path d="M 433.2561950683594 78.39954376220703 L 0.5000267028808594 78.39954376220703 L 0.5000267028808594 0.499986469745636 L 433.2561950683594 0.499986469745636 L 433.2561950683594 78.39954376220703 Z" stroke="none"/>
+        <path d="M 0.999969482421875 0.9999847412109375 L 0.999969482421875 77.89954376220703 L 432.7561340332031 77.89954376220703 L 432.7561340332031 0.9999847412109375 L 0.999969482421875 0.9999847412109375 M -3.0517578125e-05 -1.52587890625e-05 L 433.7561340332031 -1.52587890625e-05 L 433.7561340332031 78.89954376220703 L -3.0517578125e-05 78.89954376220703 L -3.0517578125e-05 -1.52587890625e-05 Z" stroke="none" fill="#fe5a43"/>
+      </g>
+    </g>
+    <g id="Group_341" data-name="Group 341" transform="translate(755.523 5033.97)">
+      <text id="Back_to_Top" data-name="Back to Top" transform="translate(141.509 20.391)" fill="#fe5a43" font-size="23" font-family="Helvetica-Bold, Helvetica" font-weight="700"><tspan x="-64.963" y="0">Back to Top</tspan></text>
+      <g id="_8ef3f691536d4c6026f6ae25d884986b" data-name="8ef3f691536d4c6026f6ae25d884986b" transform="translate(38.504 0) rotate(90)">
+        <path id="Path_240" data-name="Path 240" d="M25.628,38.5,5.962,19.252,25.628,0H19.252L0,19.252,19.252,38.5Z" fill="#fe5a43"/>
+      </g>
+    </g>
+  </g>
+</svg>

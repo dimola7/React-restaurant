@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="748.981" height="68.772" viewBox="0 0 748.981 68.772">
+  <defs>
+    <filter id="Rectangle_1" x="0" y="0" width="476.42" height="68.772" filterUnits="userSpaceOnUse">
+      <feOffset dx="1" dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_1-2" x="467.42" y="0" width="281.562" height="68.772" filterUnits="userSpaceOnUse">
+      <feOffset dx="1" dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_9" data-name="Group 9" transform="translate(3.5 2.5)">
+    <g id="Group_7" data-name="Group 7">
+      <g transform="matrix(1, 0, 0, 1, -3.5, -2.5)" filter="url(#Rectangle_1)">
+        <g id="Rectangle_1-3" data-name="Rectangle 1" transform="translate(3.5 2.5)" fill="#eaeaea" stroke="#fe5a43" stroke-width="0.1">
+          <rect width="467.42" height="59.772" stroke="none"/>
+          <rect x="0.05" y="0.05" width="467.32" height="59.672" fill="none"/>
+        </g>
+      </g>
+      <text id="Search_meal" data-name="Search meal" transform="translate(92.463 35.323)" fill="#fe5a43" font-size="19" font-family="Helvetica-Bold, Helvetica" font-weight="700" opacity="0.303"><tspan x="-55.979" y="0">Search meal</tspan></text>
+    </g>
+    <g id="Group_8" data-name="Group 8" transform="translate(467.42)">
+      <g transform="matrix(1, 0, 0, 1, -470.92, -2.5)" filter="url(#Rectangle_1-2)">
+        <rect id="Rectangle_1-4" data-name="Rectangle 1" width="272.562" height="59.772" transform="translate(470.92 2.5)" fill="#fe5a43"/>
+      </g>
+      <text id="SEARCH" transform="translate(133.246 35.323)" fill="#ffba48" font-size="19" font-family="Helvetica-Bold, Helvetica" font-weight="700"><tspan x="-40.115" y="0">SEARCH</tspan></text>
+    </g>
+  </g>
+</svg>

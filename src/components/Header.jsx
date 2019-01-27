@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
@@ -18,4 +19,4 @@ const Header = () => (
   </HeaderStyle>
 );
 
-export default Header;
+export default Header

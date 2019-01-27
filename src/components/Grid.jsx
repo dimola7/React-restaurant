@@ -9,7 +9,7 @@ export const Grid = styled.div`
 `;
 
 export const Column = styled.div`
-  padding: 10px;
+  padding: 32px;
   ${ props => props.columns === '3' && css`
     @media (min-width: 645px) {
       flex: 0 0 33.3%;

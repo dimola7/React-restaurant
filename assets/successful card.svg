@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="827" height="619" viewBox="0 0 827 619">
+  <defs>
+    <filter id="Rectangle_752" x="0" y="0" width="827" height="619" filterUnits="userSpaceOnUse">
+      <feOffset dx="1" dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feFlood flood-color="#ff0202" flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_1" x="262" y="480.801" width="303.003" height="86.617" filterUnits="userSpaceOnUse">
+      <feOffset dx="1" dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_376" data-name="Group 376" transform="translate(-547.5 -121.5)">
+    <g transform="matrix(1, 0, 0, 1, 547.5, 121.5)" filter="url(#Rectangle_752)">
+      <rect id="Rectangle_752-2" data-name="Rectangle 752" width="818" height="610" transform="translate(3.5 2.5)" fill="#fe5a43"/>
+    </g>
+    <g id="Group_375" data-name="Group 375" transform="translate(0 -10)">
+      <text id="Thank_You_" data-name="Thank You!" transform="translate(960 471)" fill="#fff" font-size="40" font-family="Helvetica-Bold, Helvetica" font-weight="700"><tspan x="-107.061" y="0">Thank You!</tspan></text>
+      <text id="Your_order_has_been_placed" data-name="Your order has been placed" transform="translate(960 529.5)" fill="#fff" font-size="30" font-family="Helvetica"><tspan x="-183.75" y="0">Your order has been placed</tspan></text>
+      <g id="Group_5" data-name="Group 5" transform="translate(813 614.801)">
+        <g transform="matrix(1, 0, 0, 1, -265.5, -483.3)" filter="url(#Rectangle_1)">
+          <rect id="Rectangle_1-2" data-name="Rectangle 1" width="294.003" height="77.617" transform="translate(265.5 483.3)" fill="#fff"/>
+        </g>
+        <text id="OK" transform="translate(146.145 45.048)" fill="#fe5a43" font-size="23" font-family="Helvetica-Bold, Helvetica" font-weight="700"><tspan x="-17.25" y="0">OK</tspan></text>
+      </g>
+      <g id="Group_374" data-name="Group 374">
+        <g id="Ellipse_43" data-name="Ellipse 43" transform="translate(872 185)" fill="none" stroke="#fdf7f7" stroke-width="8" opacity="0.8">
+          <circle cx="88.5" cy="88.5" r="88.5" stroke="none"/>
+          <circle cx="88.5" cy="88.5" r="84.5" fill="none"/>
+        </g>
+        <path id="Path_245" data-name="Path 245" d="M15353.767-797.767l28.986,20.385,62.686-60.428" transform="translate(-14439.267 1081.31)" fill="none" stroke="#fff" stroke-width="10"/>
+      </g>
+    </g>
+  </g>
+</svg>
