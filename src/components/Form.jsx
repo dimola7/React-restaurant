@@ -45,6 +45,12 @@ const Formstyle = styled.form`
       height: 90px;
       width: 90px;
     }
+    @media(max-width: 720px){
+      img{
+        height: 90px;
+        width: 90px;
+      }
+    }
   }
 `;
 

@@ -38,7 +38,7 @@ const Nav = styled.div`
   @media (min-width:768px){
     .nav_respond{
       display:none;
-      background-color: nlue;
+      background-color: blue;
     }
     
   }
@@ -60,7 +60,16 @@ const Navgroup = styled.nav`
     padding: 0px 0;
     text-align: center;
     display: grid;
-    grid-template-columns: repeat(7, auto);
+    grid-template-columns: repeat(5, auto);
+    align-items: center;
+    justify-items: center;
+    width:100%;
+  }
+  @media (max-width:768px){
+    padding: 0px 0;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
     align-items: center;
     justify-items: center;
     width:100%;
@@ -88,6 +97,12 @@ const Navgroup = styled.nav`
     width: 90px;
     height: 90px;
   }
+  @media(max-width: 900px){
+    .logo2{
+      width: 70px;
+      height: 70px;
+    }
+  }
 `; 
 
 class Navbar extends Component{
@@ -106,19 +121,6 @@ class Navbar extends Component{
   render(){
     return(
       <Nav>
-        <div className="nav_respond">
-          <div className="collapse">
-            <Link to="/">
-              <img src={Logo} alt="logo" />
-            </Link>
-          </div>
-          <input type="checkbox" id="menu" />
-          <label for="menu">
-                    <span className='icon-bar'></span>
-                    <span className='icon-bar'></span>
-                    <span className='icon-bar'></span>
-                </label>
-        </div>
         <Navgroup>
           <Link to="/"><img src={Logo} className='logo2' alt="logo" /></Link>
           <Link to="/">
@@ -126,22 +128,6 @@ class Navbar extends Component{
   <g id="Group_42" data-name="Group 42" transform="translate(-237 -809.144)">
     <rect id="Rectangle_12" data-name="Rectangle 12" width="245" height="60" transform="translate(237 809.144)" fill="#fff" />
     <text id="SIGN_UP" data-name="SIGN UP" transform="translate(308 846.144)" fill="#fe5a43" border= "1px solid red" font-size="30" font-family="Helvetica-Bold, Helvetica" font-weight="700"><tspan x="0" y="0">Home</tspan></text>
-  </g>
-</svg>
-          </Link>
-          <Link to="/About">
-          <svg xmlns="http://www.w3.org/2000/svg" width="100" height="35" viewBox="0 0 245 60">
-  <g id="Group_42" data-name="Group 42" transform="translate(-237 -809.144)">
-    <rect id="Rectangle_12" data-name="Rectangle 12" width="245" height="60" transform="translate(237 809.144)" fill="#fff" />
-    <text id="SIGN_UP" data-name="SIGN UP" transform="translate(308 846.144)" fill="#fe5a43" border= "1px solid red" font-size="30" font-family="Helvetica-Bold, Helvetica" font-weight="700"><tspan x="0" y="0">About</tspan></text>
-  </g>
-</svg>
-          </Link>
-          <Link to="/contact">
-          <svg xmlns="http://www.w3.org/2000/svg" width="100" height="35" viewBox="0 0 245 60">
-  <g id="Group_42" data-name="Group 42" transform="translate(-237 -809.144)">
-    <rect id="Rectangle_12" data-name="Rectangle 12" width="245" height="60" transform="translate(237 809.144)" fill="#fff" />
-    <text id="SIGN_UP" data-name="SIGN UP" transform="translate(308 846.144)" fill="#fe5a43" border= "1px solid red" font-size="30" font-family="Helvetica-Bold, Helvetica" font-weight="700"><tspan x="0" y="0">contact</tspan></text>
   </g>
 </svg>
           </Link>

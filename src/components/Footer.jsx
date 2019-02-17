@@ -36,11 +36,19 @@ const Foot = styled.footer`
         border: none;
       }
 
-    .footer-icons{
+    .footer-icons{\
       display: flex;
       justify-content: space-evenly;
       width: 30%;
       margin: 0 2px;
+    }
+    @media only screen and (min-width: 900px) {
+      .footer-icons{
+        display: flex;
+        justify-content: space-evenly;
+        width: 30%;
+        margin: 0 2px;
+      }
     }
     p {
       color: #fff;

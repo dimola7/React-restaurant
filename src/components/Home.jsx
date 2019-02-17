@@ -84,6 +84,11 @@ const HomeStyle = styled.div`
   margin-left: 40%;
   margin-right: 30%;
 }
+@media(max-width: 900px){
+  .button{
+    font-size: 0px;
+  }
+}
  a {
   color: #fff;
   text-decoration: none;
