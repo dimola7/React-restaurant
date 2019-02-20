@@ -7,6 +7,7 @@ import LoginPage from './components/LoginPage';
 import signupPage from './components/signupPage';
 import Navbar from './components/Navbar';
 import Basket from './components/Basket';
+import Feedback from './components/Feedback';
 
 
 const Routes = () => (
@@ -20,6 +21,7 @@ const Routes = () => (
         <Route path="/signup" component={signupPage}></Route>
         <Route path="/navbar" component={Navbar}></Route>
         <Route path="/basket" component={Basket}></Route>
+        <Route path="/feedback" component={Feedback}></Route>
       </Switch>
     </Fragment>
   </Router>

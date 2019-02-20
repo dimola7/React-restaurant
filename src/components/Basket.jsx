@@ -108,9 +108,6 @@ table th {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-.basket{
-  display: inline;
-}
 h3{
   color: #fff;
   margin-left: 20px;
