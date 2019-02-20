@@ -60,7 +60,8 @@ body{
   }
 }
 p{
-  font-size: 70px;
+  font-size: 14px;
+  color: #fff;
 }
 h1{
   font-size: 20px;
@@ -81,14 +82,48 @@ input{
   font-size: 16px;
   font-weight: 600;
 }
+table {
+  margin: 0 auto;
+  border-color: #f1c40f;
+  border-top: #f1c40f;
+  border-bottom: #f1c40f;
+}
+table td {
+  padding: 1rem;
+  color: #f1c40f;
+  font-weight: 600;
+}
+table th {
+  height: 130px;
+}
 .short{
   width: 180px;
+}
+@media(max-width: 720px){
+  .short{
+    width: 170px;
+  }
 }
 .grid-input{
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-  
+.basket{
+  display: inline;
+}
+h3{
+  color: #fff;
+  margin-left: 20px;
+}
+h4{
+  color: #fff;
+  margin-left: 80px;
+  font-weight: 700;
+}
+.img{
+  color: #fff;
+}
+
 `;
 
   class Basket extends Component {
@@ -101,7 +136,7 @@ input{
     const { ready, meal } = this.state;
     return (
       <Fragment>
-      <Checkout />
+        <Checkout />
         <BasketStyle>
           <div className="wrapper">
             <div className="left">
@@ -126,7 +161,7 @@ input{
                 <div className="right2">
                   <h1>Card Details</h1>
                   <h2>CARD NUMBER</h2>
-                  <input type= "tel" class="fullname" />
+                  <input type="tel" class="fullname" />
                   <h2>CARDHOLDER NAME</h2>
                   <input type="name" class="fullname" />
                   <h2>EXPIRY DATE</h2>
@@ -138,7 +173,28 @@ input{
             </div>
 
             <div className="right">
-              <p>Lorem ipsum dolor sit amet.</p>
+            <h4 className="img"><span><img src={require('../../assets/basket.png')} alt="" height="21" width="21" /> Basket </span>
+            </h4>
+
+              <table rules="all">
+                <tr>
+                  <td>Items</td>
+                  <td>Price</td>
+                </tr>
+                <tr>
+                  <th></th>
+                  <th></th>
+                </tr>
+                <tr>
+                  <td>Delivery fee</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th></th>
+                  <th></th>
+                </tr>
+              </table>
+              <h3>Total:</h3>
             </div>
           </div>
         </BasketStyle>
