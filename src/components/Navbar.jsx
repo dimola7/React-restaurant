@@ -103,6 +103,42 @@ const Navgroup = styled.nav`
       height: 70px;
     }
   }
+  .collapsible-menu {
+    background-color: transparent;
+    padding: 0px 30px;
+    border-bottom: 3px solid transparent;
+}
+.collapsible-menu a {
+  display:block;
+  color: black;
+  padding: 10px;
+  text-decoration: none;
+}
+.collapsible-menu label {
+  font-family: 'Sedgwick Ave Display', cursive;
+  min-height: 6.2vh;
+  width: 5px;
+  font-size: 56px;
+  display: block;
+  position: absolute;
+  left: 10%;
+  top: 1%;
+  cursor: pointer;
+  background-size: 35px 50px;
+  margin-left: 70%;
+  padding: 0px 0 10px 50px;
+  border: 3px solid #f0f0f0;
+  border-radius: 5px;
+  box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
+}
+.icon-bar{
+  display: block;
+  background-color: #888888;
+  width: 29px;
+  height: 2px;
+  border-radius: 1px;
+  margin: 8px 0 8px -38px;
+}
 `; 
 
 class Navbar extends Component{
@@ -121,6 +157,12 @@ class Navbar extends Component{
   render(){
     return(
       <Nav>
+        <input type="checkbox" id="menu" />
+        <label for="menu">
+          <span className='icon-bar'></span>
+          <span className='icon-bar'></span>
+          <span className='icon-bar'></span>
+        </label>
         <Navgroup>
           <Link to="/"><img src={Logo} className='logo2' alt="logo" /></Link>
           <Link to="/">

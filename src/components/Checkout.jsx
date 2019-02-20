@@ -1,12 +1,11 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-const HeaderStyle = styled.header`
+const CheckoutStyle = styled.header`
   padding: 30px 40px;
-  background:#EA2027;
-  color: #fff;
+  background:#fff;
+  color: #EA2027;
   a{
     color: inherit;
     font-weight: bold;
@@ -14,10 +13,10 @@ const HeaderStyle = styled.header`
   }
 `;
 
-const Header = () => (
-  <HeaderStyle>
-    <Link to="/">Home</Link>
-  </HeaderStyle>
+const Checkout = () => (
+  <CheckoutStyle>
+    <Link to="/">Checkout</Link>
+  </CheckoutStyle>
 );
 
-export default Header;
+export default Checkout;
