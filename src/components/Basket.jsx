@@ -23,6 +23,9 @@ body{
     grid-gap: 50px;
   }
 }
+.left{
+  margin-top: 40px;
+}
 .wrapper2{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -35,25 +38,55 @@ body{
   }
 }
 .left2{
-  background:#EA2027;
+  background:#fff;
+  margin-left: 70px;
 }
 .right2{
-  background:blue;
+  background:#fff;
+  margin-left: 40px;
+}
+@media(max-width: 720px){
+  .right2{
+  margin-left: 70px;
+  }
 }
 .right{
-  background: yellow;
+  background: #EA2027;
+  margin-right: 70px;
+}
+@media(max-width: 720px){
+  .right{
+    margin-left: 70px;
+  }
 }
 p{
   font-size: 70px;
 }
 h1{
   font-size: 20px;
+  color: #EA2027;
+  font-weight: 700;
+  margin-bottom: 30px;
 }
 h2{
   font-size: 12px;
+  color: rgb(255,0,0, .5);
 }
-::placeholder{
-  color: red;
+input{
+  background-color: #EA2027;
+  border: none;
+  width: 375px;
+  height: 40px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+}
+.short{
+  width: 180px;
+}
+.grid-input{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
   
 `;
@@ -69,26 +102,46 @@ h2{
     return (
       <Fragment>
       <Checkout />
-      <BasketStyle>
-        <div className="wrapper">
-          <div className="left">
-            <div className="wrapper2">
-              <div className="left2">
-                <h1>Delivery Address</h1>
-                <h2>FULL NAME</h2>
-                <input type="name" class="fullname"/>
-              </div>
-              <div className="right2">
-                <p>Lorem ipsum dolor sit amet.</p>
+        <BasketStyle>
+          <div className="wrapper">
+            <div className="left">
+              <div className="wrapper2">
+                <div className="left2">
+                  <h1>Delivery Address</h1>
+                  <h2>FULL NAME</h2>
+                  <input type="email" />
+                  <h2>ADDRESS</h2>
+                  <input type="name" class="address" />
+                  <div className="grid-input">
+                    <div className="one">
+                      <h2>TOWN</h2>
+                      <input type="name" class="short" />
+                    </div>
+                    <div className="two">
+                      <h2>STATE</h2>
+                      <input type="name" class="short" />
+                    </div>
+                  </div>
+                </div>
+                <div className="right2">
+                  <h1>Card Details</h1>
+                  <h2>CARD NUMBER</h2>
+                  <input type= "tel" class="fullname" />
+                  <h2>CARDHOLDER NAME</h2>
+                  <input type="name" class="fullname" />
+                  <h2>EXPIRY DATE</h2>
+                  <input type="month" class="fullname" />
+                  <h2>CVV</h2>
+                  <input type="name" class="short" />
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="right">
-            <p>Lorem ipsum dolor sit amet.</p>
+            <div className="right">
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
           </div>
-        </div>
-      </BasketStyle>
+        </BasketStyle>
       </Fragment>
     );
   }
