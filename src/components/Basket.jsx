@@ -94,7 +94,7 @@ table td {
   font-weight: 600;
 }
 table th {
-  height: 130px;
+  height: 100px;
 }
 .short{
   width: 180px;
@@ -119,6 +119,29 @@ h4{
 }
 .img{
   color: #fff;
+}
+.wrapper3{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+@media(max-width: 720px){
+  .wrapper3{
+    margin-top: 40px;
+    grid-gap: 20px;
+  }
+}
+.btn1{
+  color: #EA2027;
+  background-color: #fff;
+  padding: 10px 30px;
+}
+.btn2{
+  color: #f1c40f;
+  background-color: #EA2027;
+  padding: 10px 30px;
+}
+.left3{
+  margin-left: 150px;
 }
 
 `;
@@ -192,6 +215,15 @@ h4{
                 </tr>
               </table>
               <h3>Total:</h3>
+            </div>
+          </div>
+
+          <div className="wrapper3">
+            <div className="left3">
+              <button className="btn1">Cancel</button>
+            </div>
+            <div className="right3">
+            <button className="btn2">Place Order</button>
             </div>
           </div>
         </BasketStyle>
