@@ -21,7 +21,7 @@ const Nav = styled.div`
     text-decoration-line: none;
     display: block;
     text-align: center;
-    font-size: 15px;
+    fontSize: 15px;
     padding: 5px;
     background-color: #b7c2f1;
     color: #EA2027;
@@ -75,7 +75,7 @@ const Navgroup = styled.nav`
     width:100%;
   }
   a {
-    font-size: 14px;
+    fontSize: 14px;
     color: #EA2027; 
     margin:-10px;
   }
@@ -130,14 +130,6 @@ const Navgroup = styled.nav`
   border: 3px solid #f0f0f0;
   border-radius: 5px;
   box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
-}
-.button2{
-  color: #f1c40f;
-  background-color: #EA2027;
-  padding: 10px 25px;
-  font-size: 14px;
-  font-weight: 600;
-  border: none;
 }
 `; 
 
