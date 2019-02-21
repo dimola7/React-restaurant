@@ -8,7 +8,7 @@ import Header from './Header';
 import swal from 'sweetalert';
 
 
-const FeedbackStyle = styled.div`
+const SinglePageStyle = styled.div`
   margin: 50px 0;
   section{
     padding-left: 40px;
@@ -18,6 +18,10 @@ const FeedbackStyle = styled.div`
     h3{
       margin: 0 0 15px 0;
       color: red;
+  }
+  .swal-button{
+    color: blue;
+    background-color: red;
   }
   ul{
     margin: 20px 0;
@@ -34,9 +38,10 @@ const FeedbackStyle = styled.div`
     }
     
   }
+
 `;
 
-class Feedback extends Component {
+class SinglePage extends Component {
   constructor(props) {
     super(props);
     this.sweetalertfunction = this.sweetalertfunction.bind(this),
@@ -76,7 +81,7 @@ class Feedback extends Component {
     return (
       <Fragment>
         <Header />
-        <FeedbackStyle>
+        <SinglePageStyle>
           <Container>
             { ready === 'loading' ? (<h1>Loading content...</h1>) : '' }
             { ready === 'loaded' && (
@@ -105,7 +110,7 @@ class Feedback extends Component {
                       </ul>
                       <h3>Description</h3>
                       <p>{meal.fields.Description}</p>
-                      <button onClick = {this.sweetalertfunction}>
+                      <button className="button" onClick = {this.sweetalertfunction}>
                         <span> Order Now</span>
                       </button>
                     </section>
@@ -114,7 +119,7 @@ class Feedback extends Component {
               </Fragment>
             ) }
           </Container>
-        </FeedbackStyle>
+        </SinglePageStyle>
         <Footer />
       </Fragment>
     );
@@ -122,4 +127,4 @@ class Feedback extends Component {
 }
 
 
-export default Feedback;
+export default SinglePage;

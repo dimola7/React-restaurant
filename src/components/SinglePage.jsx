@@ -38,6 +38,7 @@ const SinglePageStyle = styled.div`
     }
     
   }
+
 `;
 
 class SinglePage extends Component {

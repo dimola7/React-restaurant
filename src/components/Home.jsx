@@ -148,8 +148,8 @@ class Home extends Component {
     return (
       <div>
         <HomeStyle>
-          <Navbar />       
-          <Header id="top">
+          <Navbar id="top" />       
+          <Header >
             <h1>So Fast! So Hot!!</h1>
             <Form />
             <img src= "book-search.png" alt=""  />
