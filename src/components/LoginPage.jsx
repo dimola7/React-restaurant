@@ -27,8 +27,8 @@ padding: 0;
 }
 @media(max-width: 720px){
   .left{
-  margin-right: 150px;
-  marg
+  margin-left: 70px;
+  height: 100%;
   }
 }
 .left img{
@@ -122,7 +122,7 @@ class LoginPage extends Component {
           <Link to="/">
           <button className="button">LOG IN</button>
           </Link>
-          <p>New to Delish Foods? <Link to="signup">click here</Link></p>
+          <p>New to Delish Foods? <Link to="signup">sign up</Link></p>
 
           </div>
           <div className="right">

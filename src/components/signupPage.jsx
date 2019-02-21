@@ -7,79 +7,105 @@ import { Link } from 'react-router-dom';
 
 
 const SignupPageStyle = styled.div`
-  margin: 0px auto;
-  padding: 0;
-  width: 100%;
-  height: 100%;
+margin: 0px auto;
+padding: 0;
 
 .wrapper{
-  display:grid;
-  grid-template-columns:1fr 2fr;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin-top:80px;
+  margin-left: 250px;
 }
-.FormField{
-  padding-left: 13px;
-  margin: 20px;
-}
-.FormField__Label{
-  position: relative;
-  font-size: 12px;
-  top: 60px;
-  display: block;
-}
-.FormField__Input{
-  position: relative;
-  outline: none;
-  font-size: 12px;
-  top: 60px;
-  display: block;
-  background-color: #EA2027;
-  border: 0px;
-  border-bottom: 1px solid white;
-  display: block;
-  color: #fff;
-  ::placeholder{
-    color: rgb(255,255,255, .5)
+@media(max-width: 720px){
+  .wrapper{
+    margin-left: 0px;
   }
 }
-.FormField__user{
-  display:grid;
-  grid-template-columns:1fr 1fr;  
-  justify-items: center;
- 
+.wrapper2{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0px;
 }
-.svg{
-  position: relative;
-  left: 170px;
-  top: 100px;
+.left{
+  background-color: #EA2027;
+  height:75vh;
 }
-
-.left {
-  background: #EA2027;
-  color: #fff;
-  position: relative;
-  left: 170px;
-  font-weight: 700;
+@media(max-width: 720px){
+  .left{
+  margin-left: 70px;
+  height: 100%;
+  }
 }
-
 .left img{
-  position: relative;
-  left: 30px;
-  top: 30px;
+  margin-left: 30px;
+  margin-top: 15px;
+}
+@media(max-width: 720px){
+  .left img{
+    margin-right: 130px;
+  }
+}
+.right{
+  height: 400px;
 }
 .right img{
-  object-fit:contain;
-  height:95vh;
-  width:100%;
+  height:75vh;
+  width:70%;
 }
+@media(max-width: 720px){
+  .right img{
+  height: 0vh;
+  width: 0%;
+  }
+}
+
+h2{
+  color: #fff;
+  font-size: 14px;
+  margin-left: 40px;
+}
+.wrapper2 input{
+  width: 135px;
+}
+input{
+  border-top: none;
+  border-bottom:
+  width: 175px;
+  height: 20px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  margin-left: 40px;
+}
+.button{
+  background-color: #f1c40f;
+  color: #EA2027;
+  position: relative;
+  top: 60px;
+  right: 120px;
+  border: none;
+  padding: 10px 27px;
+  font-weight: 600;
+  cursor: pointer;
+}
+p{
+  margin-top: 80px;
+  margin-left: 100px;
+  font-size: 12px;
+  color: #fff;
+}
+a{  
+  text-decoration: none;
+  color: #f1c40f;
+}
+
 `;
 
 
 class signupPage extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      meal: {},
-    }
+    this.state = {value: ''};
   }
 
 
@@ -89,50 +115,32 @@ class signupPage extends Component {
       <SignupPageStyle>
         <div className="wrapper">
           <div className="left">
-
             <img style={{ width: '70px', height: '70px' }} src={logo} alt="" />
-            <form onSubmit={this.handleSubmit}>
-
-              <div className="FormField__user">
-                <div className="fname">
-                  <label className="FormField__Label" htmlFor="email">First Name</label>
-                  <input type="email" id="First" className="FormField__Input" placeholder="your name" name="email" value={this.state.email} onChange={this.handleChange} />
-                </div>
-                <div className="lname">
-                  <label className="FormField__Label" htmlFor="email">Last Name</label>
-                  <input type="email" id="First" className="FormField__Input" placeholder="your name" name="email" value={this.state.email} onChange={this.handleChange} />
-                </div>
+            <div className="wrapper2">
+              <div className="left2">
+                <h2>First Name</h2>
+                <input type="email" />
               </div>
-              <div className="FormField">
-                <label className="FormField__Label" htmlFor="email">Phone Number</label>
-                <input type="email" id="email" className="FormField__Input" placeholder="Enter your email" name="email" value={this.state.email} onChange={this.handleChange} />
+              <div className="right2">
+                <h2>Last Name</h2>
+                <input type="name" />
               </div>
-              <div className="FormField">
-                <label className="FormField__Label" htmlFor="password">Password</label>
-                <input type="password" id="password" className="FormField__Input" placeholder="Enter your password" name="password" value={this.state.password} onChange={this.handleChange} />
-              </div>
-              <div className="FormField">
-                <label className="FormField__Label" htmlFor="password">Confirm Password</label>
-                <input type="password" id="password" className="FormField__Input" placeholder="Enter your password" name="password" value={this.state.password} onChange={this.handleChange} />
-              </div>
-              <div>
-              </div>
-            </form>
-            <Link to="/">
-            <div className="svg">
-            <svg xmlns="http://www.w3.org/2000/svg" width="120" height="60" viewBox="0 0 245 60">
-              <g id="Group_42" data-name="Group 42" transform="translate(-237 -809.144)">
-                <rect id="Rectangle_12" data-name="Rectangle 12" width="245" height="60" transform="translate(237 809.144)" fill="#ffba48" />
-                <text id="SIGN_UP" data-name="SIGN UP" transform="translate(308 846.144)" fill="#fe5a43" font-size="25" font-family="Helvetica-Bold, Helvetica" font-weight="700"><tspan x="0" y="0">SIGN UP</tspan></text>
-              </g>
-            </svg>
             </div>
+            <h2>Email</h2>
+            <input type="email" />
+            <h2>Password</h2>
+            <input type="password" />
+            <h2>Confirm Password</h2>
+            <input type="password" />
+            <Link to="/">
+              <button className="button">SIGN UP</button>
             </Link>
-            
+            <p>Already have an account? <Link to="signin">log in</Link></p>
           </div>
-
           <div className="right">
-            <img src={require("../../assets/cake.png")} alt="about image" />
+            <div className="right">
+              <img src={require("../../assets/cake.png")} alt="about image" />
+            </div>
           </div>
         </div>
       </SignupPageStyle>
