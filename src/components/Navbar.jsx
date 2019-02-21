@@ -131,13 +131,13 @@ const Navgroup = styled.nav`
   border-radius: 5px;
   box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
 }
-.icon-bar{
-  display: block;
-  background-color: #888888;
-  width: 29px;
-  height: 2px;
-  border-radius: 1px;
-  margin: 8px 0 8px -38px;
+.button2{
+  color: #f1c40f;
+  background-color: #EA2027;
+  padding: 10px 25px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
 }
 `; 
 
@@ -157,12 +157,6 @@ class Navbar extends Component{
   render(){
     return(
       <Nav>
-        <input type="checkbox" id="menu" />
-        <label for="menu">
-          <span className='icon-bar'></span>
-          <span className='icon-bar'></span>
-          <span className='icon-bar'></span>
-        </label>
         <Navgroup>
           <Link to="/"><img src={Logo} className='logo2' alt="logo" /></Link>
           <Link to="/">

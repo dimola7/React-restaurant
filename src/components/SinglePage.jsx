@@ -19,6 +19,10 @@ const SinglePageStyle = styled.div`
       margin: 0 0 15px 0;
       color: red;
   }
+  .swal-button{
+    color: blue;
+    background-color: red;
+  }
   ul{
     margin: 20px 0;
   }
@@ -105,7 +109,7 @@ class SinglePage extends Component {
                       </ul>
                       <h3>Description</h3>
                       <p>{meal.fields.Description}</p>
-                      <button onClick = {this.sweetalertfunction}>
+                      <button className="button" onClick = {this.sweetalertfunction}>
                         <span> Order Now</span>
                       </button>
                     </section>
