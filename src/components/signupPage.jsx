@@ -67,6 +67,12 @@ h2{
 .wrapper2 input{
   width: 135px;
 }
+@media(max-width: 720px){
+  .right2{
+    margin-right: 40px;
+  }
+
+}
 input{
   border-top: none;
   border-bottom:
