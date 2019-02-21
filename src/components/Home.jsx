@@ -149,7 +149,7 @@ class Home extends Component {
       <div>
         <HomeStyle>
           <Navbar />       
-          <Header>
+          <Header id="top">
             <h1>So Fast! So Hot!!</h1>
             <Form />
             <img src= "book-search.png" alt=""  />
@@ -194,14 +194,14 @@ class Home extends Component {
             </Container>
           </main>
      
-          <Link to="/">
           
+          <a href="#top">
             <button class="button"><span><svg xmlns="http://www.w3.org/2000/svg" width="18" height="15" viewBox="0 0 38.504 25.628">
               <g id="_8ef3f691536d4c6026f6ae25d884986b" data-name="8ef3f691536d4c6026f6ae25d884986b" transform="translate(38.505) rotate(90)">
                 <path id="Path_240" data-name="Path 240" d="M25.628,38.5,5.962,19.252,25.628,0H19.252L0,19.252,19.252,38.5Z" fill="#fe5a43"/>
               </g>
             </svg> Back to the top </span></button>
-            </Link>
+            </a>
           <Footer />
         </HomeStyle>
       </div>
