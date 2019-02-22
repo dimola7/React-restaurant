@@ -18,7 +18,7 @@ padding: 0;
 }
 @media(max-width: 720px){
   .wrapper{
-    margin-left: 0px;
+    margin-left: -70px;
   }
 }
 .wrapper2{

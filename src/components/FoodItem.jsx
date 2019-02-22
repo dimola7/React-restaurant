@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const FoodItemStyle = styled.div`
   height: 320px; rgba(0, 0, 0, .2);
   background: #EA2027;
-  color: #fff;
+  color: #f1c40f;
   overflow: hidden;
   img{
     width: 100%;
@@ -23,7 +23,7 @@ const FoodItemStyle = styled.div`
     font-size: 20px;
   }
   a{
-    color: #fff;
+    color: #f1c40f;
     text-decoration: none;
     font-family: Helvetica, Sans-Serif;
   }

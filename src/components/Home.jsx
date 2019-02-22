@@ -89,10 +89,7 @@ const HomeStyle = styled.div`
     font-size: 0px;
   }
 }
- a {
-  color: #fff;
-  text-decoration: none;
-}
+
 @media(min-width: 720px) {
 .menu {
   background-color: #EA2027;

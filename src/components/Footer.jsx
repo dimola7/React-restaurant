@@ -23,7 +23,7 @@ const Foot = styled.footer`
     button{
       background: #f1c40f;
       color: #EA2027;
-      border:none;
+      border:none;color: red;
       height: 21px;
       width: 80px;
       font-size: 11px;
@@ -49,6 +49,9 @@ const Foot = styled.footer`
         width: 30%;
         margin: 0 2px;
       }
+    }
+    input::placeholder{
+      padding-left: 10px;
     }
     p {
       color: #fff;

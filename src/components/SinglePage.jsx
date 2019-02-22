@@ -53,12 +53,8 @@ class SinglePage extends Component {
   
   sweetalertfunction () {
     console.log('button clicks');
-    swal("Please enter delivery address:", {
-      content: "input",
-    })
-    .then((value) => {
       swal("Thank you!", "Your order has been placed", "success");
-    });
+    ;
   }
 
   componentDidMount() {
