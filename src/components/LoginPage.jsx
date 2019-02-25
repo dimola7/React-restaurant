@@ -69,7 +69,7 @@ input{
   border-bottom:
   width: 175px;
   height: 20px;
-  color: #fff;
+  color: black;
   font-size: 14px;
   font-weight: 600;
   margin-left: 80px;

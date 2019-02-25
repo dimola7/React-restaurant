@@ -11,7 +11,8 @@ const Foot = styled.footer`
   .footergrid {
     background-color: #EA2027;
     height: 100%;
-    text-align: left;font-size: 18pfont-size: 18px;x;
+    text-align: left;
+    font-size: 18px;
     padding: 10px;
     h1{
       color: #f1c40f;
@@ -23,8 +24,8 @@ const Foot = styled.footer`
     button{
       background: #f1c40f;
       color: #EA2027;
-      border:none;color: red;
-      height: 21px;
+      border:none;
+      height: 22px;
       width: 80px;
       font-size: 11px;
     }

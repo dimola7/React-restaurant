@@ -78,7 +78,7 @@ input{
   border-bottom:
   width: 175px;
   height: 20px;
-  color: #fff;
+  color: black;
   font-size: 14px;
   font-weight: 600;
   margin-left: 40px;
@@ -125,7 +125,7 @@ class signupPage extends Component {
             <div className="wrapper2">
               <div className="left2">
                 <h2>First Name</h2>
-                <input type="email" />
+                <input type="text" />
               </div>
               <div className="right2">
                 <h2>Last Name</h2>

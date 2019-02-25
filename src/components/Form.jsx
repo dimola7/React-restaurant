@@ -23,12 +23,10 @@ const Formstyle = styled.form`
     margin: 10px 2px;
     background: #EA2027;
     border:none;
-    color: rgb(241, 196, 15);
-    font: inherit;
-    font-size: 18px;
+    color: #fff;
+    font-size: 16px;
     font-weight: bold;
-    padding: 10px;
-    bottom: 50px;
+    cursor: pointer;
   }
   @media(min-width: 720px) {
     input{
@@ -41,89 +39,60 @@ const Formstyle = styled.form`
       position: relative;
       bottom: 90px;
     }
-    img{
-      height: 90px;
-      width: 90px;
-    }
-    @media(max-width: 720px){
-      img{
-        height: 90px;
-        width: 90px;
-      }
-    }
   }
 `;
 
 
 class Form extends Component {
-  constructor() {
-    super();
-    this.state = {
-      // state initialization
-      clickEvent: '',
-      ready: '',
-      input: '',
-      SearchBy: '',
-   
-    };
-    this.addInput = this.addInput.bind(this);
-    this.search = this.search.bind(this);
-    this.SearchBy = this.SearchBy.bind(this);
-  }
-  addInput(event) {
-    this.setState({
-      input: event.target.value,
-    })
-  }
-
-  SearchBy(event) {
-      const select = {
-        meal : document.getElementById('meal').getAttribute('id'),
-       };       
-   
-    this.setState({
-      select: event.target.value,
-    })
-  }
- 
-  search(event) {
-    event.preventDefault();
-    const {input, select} = this.state;
-    // const {select} = this.state;
-    this.setState({
-      ready: 'loading',
-      input: '', 
-    });
-    
-    axios({
-      mode: 'no-cors',	    
-      method: 'get',
-      url: `https://api.airtable.com/v0/app0s53GIQZBB0T5d/Cuisines/`,
-      headers: {Authorization: `Bearer keyhAAqvSVG6kZeVZ`}
-    })
-    .then(({ data:{data} } ) =>{
-      const {select} = this.state;
-        console.log(data);
+    constructor() {
+      super(); 
+      this.state = {
+        meals: [],
+        ready: 'initial',
+        search: " ",
+      };
+    } 
+    componentDidMount() {
+      this.setState({
+        ready: 'loading',
+      });
+      axios({
+        method: 'get',
+        url: `https://api.airtable.com/v0/app0s53GIQZBB0T5d/Cuisines/`,
+        headers: { Authorization: `Bearer keyhAAqvSVG6kZeVZ` },
+  
+      }).then(({ data: { records } }) => {
+        ;
         this.setState({
           ready: 'loaded',
-          meal: data,
-          select: '',
+          meals: records,
         })
-        
-    })
-    .catch(err =>{
-      console.log(error);
-      this.setState({
-        ready: 'error'
       })
-    })
-  }
+    };
+    MealChange(e) {
+      this.setState({
+        search: e.target.value
+      })
+    };
 
   render() {
-    return (    
-      <Formstyle onSubmit={this.search}>
-      <input onChange={this.addInput} type="text" name="search" placeholder="Search meal" /> 
-       <button type="submit">Search</button>
+    const { meals, ready, search } = this.state;
+
+    const filtered = meals.filter(meal => {
+      return meal.fields.toString().toLowerCase().indexOf(search.toLowerCase()) !== -1 ||
+        meal.fields.toString().toLowerCase().indexOf(search.toLowerCase()) !== -1
+    });
+
+    return (  
+      <Formstyle>
+        <input
+          type="search"
+          name="Meals"
+          placeholder="Search meal"
+          onChange={this.MealChange.bind(this)}
+        />
+        <button>Search</button>
+        
       </Formstyle>
     );
   }
