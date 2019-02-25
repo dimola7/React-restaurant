@@ -30,14 +30,14 @@ const Foot = styled.footer`
       font-size: 11px;
     }
     @media(min-width: 720px) {
-      input{
+      .input{
         width: 150px;
         margin: 0 -5px;
         height: 21px;
         border: none;
       }
 
-    .footer-icons{\
+    .footer-icons{
       display: flex;
       justify-content: space-evenly;
       width: 30%;
@@ -51,7 +51,7 @@ const Foot = styled.footer`
         margin: 0 2px;
       }
     }
-    input::placeholder{
+    .input::placeholder{
       padding-left: 10px;
     }
     p {
@@ -128,7 +128,7 @@ const Footer = () => (
         <h4>Subscribe to Delish Foods via Email</h4>
         <p>Excepteur sint occaecat cupidatat non proident. </p>
         <p>sunt in culpa qué officia </p>
-        <p><input type="text" name="subscibe" placeholder="Email Address" /> 
+        <p><input className="input" type="email" name="subscibe" placeholder="Email Address" /> 
        <button type="submit">SUBSCRIBE</button>
       </p>
       </div>

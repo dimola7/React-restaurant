@@ -7,7 +7,7 @@ import FoodBg from '../../assets/food.jpg';
 import FoodItem from './FoodItem';
 import Footer from './Footer';
 import Container from './Container';
-import Form from './Form';
+// import Form from './Form';
 import Navbar from './Navbar';
 
 
@@ -27,7 +27,8 @@ const HomeStyle = styled.div`
  h1{
   color: #f1c40f;
   position: relative;
-  bottom: 90px;
+  bottom: 100px;
+  
  }
  
  h2{
@@ -102,7 +103,46 @@ const HomeStyle = styled.div`
   left: 219px;
 }
 }
-`;
+.form{
+  margin-top: 20px;
+}
+.search{
+  height: 40px;
+  border: 0;
+  font: inherit;
+  padding: 10px;
+  width: 100%;
+  position: relative;
+  bottom: 90px;
+  ::placeholder{
+    color: rgb(255,0,0, .5);
+  }
+}
+.sbtn{
+  display: inline-block;
+  width: 100%;
+  height: 40px;
+  margin: 10px 2px;
+  background: #EA2027;
+  border:none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+@media(min-width: 720px) {
+  .search{
+    width: 300px;
+    margin: 0 -5px;
+  }
+  .sbtn{
+    width: 100px;
+    margin: 0 5px;
+    position: relative;
+    bottom: 90px;
+  }
+}
+ `;
 
 const Header = styled.header`
   padding: 150px 20px;
@@ -121,7 +161,8 @@ class Home extends Component {
     super();
     this.state = {
       meals: [],
-      ready: 'initial',     
+      ready: 'initial',
+      search: " ",    
     };
   }
   
@@ -139,7 +180,13 @@ class Home extends Component {
         meals: records,
       })
     })
-  }
+  };
+  MealChange(e) {
+    this.setState({
+      search: e.target.value
+    })
+  };
+
   render() {
     const { meals, ready } = this.state;
     return (
@@ -148,7 +195,16 @@ class Home extends Component {
           <Navbar id="top" />       
           <Header >
             <h1>So Fast! So Hot!!</h1>
-            <Form />
+            <div className="form">
+              <input
+                type="search"
+                name="Meals"
+                placeholder="Search meal"
+                className="search"
+              />
+              <button className="sbtn">Search</button>
+            </div>
+            {/* <Form /> */}
             <img src= "book-search.png" alt=""  />
             <svg xmlns="http://www.w3.org/2000/svg" width="170.551" height="60.735" viewBox="0 0 170.551 60.735">
               <g id="Group_337" data-name="Group 337" transform="translate(0.683 1.003)" opacity="0.5">
