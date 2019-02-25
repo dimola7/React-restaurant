@@ -1,132 +1,126 @@
-import React, { Component } from 'react';
+import React, { Fragment, Component } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
+import Footer from './Footer';
+import { Grid, Column } from './Grid';
+import Container from './Container';
+import Header from './Header';
+import swal from 'sweetalert';
 
-const Formstyle = styled.form`
-  margin-top:1.8em;
-  input{
-    height: 40px;
-    border: 0;
-    font: inherit;
-    padding: 10px;
-    width: 100%;
-    position: relative;
-    bottom: 90px;
-    ::placeholder{
-      color: rgb(255,0,0, .5);
-    }
+
+const SinglePageStyle = styled.div`
+  margin: 50px 0;
+  section{
+    padding-left: 40px;
   }
-  button{
-    display: inline-block;
-    width: 100%;
-    height: 40px;
-    margin: 10px 2px;
-    background: #EA2027;
-    border:none;
-    color: rgb(241, 196, 15);
-    font: inherit;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 10px;
-    bottom: 50px;
+  h2{
+    margin: 0 0 15px 0;
+    h3{
+      margin: 0 0 15px 0;
+      color: red;
   }
-  @media(min-width: 720px) {
-    input{
-      width: 300px;
-      margin: 0 -5px;
-    }
-    button{
-      width: 100px;
-      margin: 0 5px;
-      position: relative;
-      bottom: 90px;
-    }
-    img{
-      height: 90px;
-      width: 90px;
-    }
-    @media(max-width: 720px){
-      img{
-        height: 90px;
-        width: 90px;
-      }
-    }
+  .swal-button{
+    color: blue;
+    background-color: red;
   }
+  ul{
+    margin: 20px 0;
+  }
+  small{
+    margin-left: 5px;
+    font-size: 16px;
+    color: #999;
+    &::before{
+      content: '(';
+    }
+    &::after{
+      content: ')';
+    }
+    
+  }
+
 `;
 
-
-class Form extends Component {
-  constructor() {
-    super();
+class SinglePage extends Component {
+  constructor(props) {
+    super(props);
+    this.sweetalertfunction = this.sweetalertfunction.bind(this),
     this.state = {
-      // state initialization
-      clickEvent: '',
-      ready: '',
-      input: '',
-      SearchBy: '',
-   
-    };
-    this.addInput = this.addInput.bind(this);
-    this.search = this.search.bind(this);
-    this.SearchBy = this.SearchBy.bind(this);
+      meal: {},
+      ready: 'initial',
+    }
   }
-  addInput(event) {
-    this.setState({
-      input: event.target.value,
-    })
+  
+  sweetalertfunction () {
+    console.log('button clicks');
+      swal("Thank you!", "Your order has been placed", "success");
+    ;
   }
 
-  SearchBy(event) {
-      const select = {
-        meal : document.getElementById('meal').getAttribute('id'),
-       };       
-   
-    this.setState({
-      select: event.target.value,
-    })
-  }
- 
-  search(event) {
-    event.preventDefault();
-    const {input, select} = this.state;
-    // const {select} = this.state;
-    this.setState({
-      ready: 'loading',
-      input: '', 
-    });
-    
+  componentDidMount() {
+    const { match : { params } } = this.props;
+    const id = params.id;
+    this.setState({ ready: 'loading' });
     axios({
-      mode: 'no-cors',	    
       method: 'get',
-      url: `https://api.airtable.com/v0/app0s53GIQZBB0T5d/Cuisines/`,
-      headers: {Authorization: `Bearer keyhAAqvSVG6kZeVZ`}
-    })
-    .then(({ data:{data} } ) =>{
-      const {select} = this.state;
-        console.log(data);
-        this.setState({
-          ready: 'loaded',
-          meal: data,
-          select: '',
-        })
-        
-    })
-    .catch(err =>{
-      console.log(error);
+      url: `https://api.airtable.com/v0/app0s53GIQZBB0T5d/Cuisines/${id}`,
+      headers: { Authorization: `Bearer keyhAAqvSVG6kZeVZ` },
+    }).then(({ data }) => {
       this.setState({
-        ready: 'error'
-      })
-    })
+        meal: data,
+        ready: 'loaded',
+      });
+    });
   }
-
   render() {
-    return (    
-      <Formstyle onSubmit={this.search}>
-      <input onChange={this.addInput} type="text" name="search" placeholder="Search meal" /> 
-       <button type="submit">Search</button>
-      </Formstyle>
+    const { ready, meal } = this.state;
+    return (
+      <Fragment>
+        <Header />
+        <SinglePageStyle>
+          <Container>
+            { ready === 'loading' ? (<h1>Loading content...</h1>) : '' }
+            { ready === 'loaded' && (
+              <Fragment>
+                <Grid>
+                  <Column columns="2">
+                  </Column>
+                  <Column columns="2">
+                    <section>
+                      <h1>{meal.fields.Name}</h1>
+                  
+                    </section>
+                  </Column>
+                </Grid>
+                <Grid>
+                  <Column columns="2">
+                    <img src={meal.fields.Icon[0].thumbnails.large.url} alt="Meal" />
+                  </Column>
+                  <Column columns="2">
+                    <section>
+                      <h2>Price:{meal.fields.Price}</h2>
+                      <ul>
+                        { meal.fields.Prices && meal.fields.Prices.map((prices, index) => (
+                          <li key={index}>{price}</li>
+                        )) }
+                      </ul>
+                      <h3>Description</h3>
+                      <p>{meal.fields.Description}</p>
+                      <button className="button" onClick = {this.sweetalertfunction}>
+                        <span> Order Now</span>
+                      </button>
+                    </section>
+                  </Column>
+                </Grid>
+              </Fragment>
+            ) }
+          </Container>
+        </SinglePageStyle>
+        <Footer />
+      </Fragment>
     );
   }
-} 
+}
 
-export default Form;
+
+export default SinglePage;

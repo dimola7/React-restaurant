@@ -188,7 +188,12 @@ class Home extends Component {
   };
 
   render() {
-    const { meals, ready } = this.state;
+    const { meals, ready,search } = this.state;
+
+    const filtered = meals.filter(meal => {
+      return meal.fields.Name.toLowerCase().indexOf(search.toLowerCase()) !== -1
+    });
+
     return (
       <div>
         <HomeStyle>
@@ -201,6 +206,7 @@ class Home extends Component {
                 name="Meals"
                 placeholder="Search meal"
                 className="search"
+                onChange={this.MealChange.bind(this)}
               />
               <button className="sbtn">Search</button>
             </div>
@@ -235,7 +241,7 @@ class Home extends Component {
               <Grid>
                 {meals.length ? '' : ''}
                 {ready === 'loading' ? 'Loading...' : ''}
-                {meals.map(meal => (
+                {filtered.map(meal => (
                   <Column columns="3" key={meal.id}>
                     <FoodItem image={meal.fields.Icon ? meal.fields.Icon[0].url : ''} >
                       <h3><Link to={`/meal/${meal.id}`}>{meal.fields.Name}</Link></h3>
