@@ -27,7 +27,6 @@ const HomeStyle = styled.div`
   color: #f1c40f;
   position: relative;
   bottom: 100px;
-  
  }
  
  h2{
@@ -88,6 +87,12 @@ const HomeStyle = styled.div`
   .button{
     font-size: 0px;
   }
+
+ h1{
+  color: #f1c40f;
+  position: relative;
+  bottom: 70px;
+ }
 }
 
 @media(min-width: 720px) {
@@ -112,7 +117,7 @@ const HomeStyle = styled.div`
   padding: 10px;
   width: 100%;
   position: relative;
-  bottom: 70px;
+  bottom: 40px;
   ::placeholder{
     color: rgb(255,0,0, .5);
   }
@@ -133,12 +138,13 @@ const HomeStyle = styled.div`
   .search{
     width: 300px;
     margin: 0 -5px;
+    bottom: 70px;
   }
   .sbtn{
     width: 100px;
     margin: 0 5px;
     position: relative;
-    bottom: 90px;
+    bottom: 70px;
   }
 }
 @media(max-width: 720px) {
@@ -170,7 +176,7 @@ const Header = styled.header`
   margin-top: 0px;
 
   @media(max-width: 720px) {
-    
+    padding: 80px 20px;
   }
 `;
 

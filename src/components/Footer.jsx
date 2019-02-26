@@ -63,7 +63,6 @@ const Foot = styled.footer`
       display:grid;
       grid-template-columns:repeat(2,1fr);
       padding:20px;
-      
     }
     @media (min-width: 1024px) {
       display:grid;
