@@ -15,28 +15,9 @@ const SinglePageStyle = styled.div`
   }
   h2{
     margin: 0 0 15px 0;
-    h3{
+  
+  h3{
       margin: 0 0 15px 0;
-      color: red;
-  }
-  .swal-button{
-    color: blue;
-    background-color: red;
-  }
-  ul{
-    margin: 20px 0;
-  }
-  small{
-    margin-left: 5px;
-    font-size: 16px;
-    color: #999;
-    &::before{
-      content: '(';
-    }
-    &::after{
-      content: ')';
-    }
-    
   }
 
 `;
@@ -94,7 +75,7 @@ class SinglePage extends Component {
                 </Grid>
                 <Grid>
                   <Column columns="2">
-                    <img src={meal.fields.Icon[0].thumbnails.large.url} alt="Meal" />
+                    <img src={meal.fields.Icon[0].thumbnails.large.url} className="img" alt="Meal" />
                   </Column>
                   <Column columns="2">
                     <section>

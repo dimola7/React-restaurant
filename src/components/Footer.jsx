@@ -63,6 +63,7 @@ const Foot = styled.footer`
       display:grid;
       grid-template-columns:repeat(2,1fr);
       padding:20px;
+      
     }
     @media (min-width: 1024px) {
       display:grid;
@@ -121,7 +122,6 @@ const Footer = () => (
         <p>Work With Us </p>
         <p>Privacy Policy </p>
         <p>Terms & Conditions</p>
-        <p>Press Enquiries</p>
       </div>
       
       <div className="footer-subscribtion">

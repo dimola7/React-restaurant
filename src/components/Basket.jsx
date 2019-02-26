@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import axios from 'axios';
 import Checkout from './Checkout';
 import Container from './Container';
+import { Link } from 'react-router-dom';
+import swal from 'sweetalert';
 
 const BasketStyle = styled.div`
 body{
@@ -143,13 +145,26 @@ h4{
 .left3{
   margin-left: 150px;
 }
+.swal{
+  background-color: red;
+}
 
 `;
 
   class Basket extends Component {
     constructor(props) {
       super(props);
+      this.sweetalertfunction = this.sweetalertfunction.bind(this),
       this.state = {value: ''};
+    }
+    sweetalertfunction () {
+      console.log('button clicks');
+        swal(
+        "Thank you!", 
+        "Your order has been placed",
+        "success"
+        );
+      ;
     }
  
   render() {
@@ -220,10 +235,11 @@ h4{
 
           <div className="wrapper3">
             <div className="left3">
-              <button className="btn1">Cancel</button>
+            <Link to="/"><button className="btn1">Cancel</button>
+            </Link>
             </div>
             <div className="right3">
-            <button className="btn2">Place Order</button>
+            <button className="btn2" onClick = {this.sweetalertfunction}>Place Order</button>
             </div>
           </div>
         </BasketStyle>

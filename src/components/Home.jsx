@@ -7,7 +7,6 @@ import FoodBg from '../../assets/food.jpg';
 import FoodItem from './FoodItem';
 import Footer from './Footer';
 import Container from './Container';
-// import Form from './Form';
 import Navbar from './Navbar';
 
 
@@ -113,7 +112,7 @@ const HomeStyle = styled.div`
   padding: 10px;
   width: 100%;
   position: relative;
-  bottom: 90px;
+  bottom: 70px;
   ::placeholder{
     color: rgb(255,0,0, .5);
   }
@@ -122,7 +121,7 @@ const HomeStyle = styled.div`
   display: inline-block;
   width: 100%;
   height: 40px;
-  margin: 10px 2px;
+  margin: 0px 2px 0px 0px;
   background: #EA2027;
   border:none;
   color: #fff;
@@ -142,6 +141,23 @@ const HomeStyle = styled.div`
     bottom: 90px;
   }
 }
+@media(max-width: 720px) {
+#Group_337{
+  display: none;
+  }
+.pic{
+   display: none;
+ }
+ .menu {
+  background-color: #EA2027;
+  color: #f1c40f;
+  padding: 15px;
+  margin-top: -40px;
+  font-size: 17px;
+  width: 100%;
+  position: relative;
+}
+}
  `;
 
 const Header = styled.header`
@@ -152,7 +168,12 @@ const Header = styled.header`
   background-position: center;
   color: #fff;
   margin-top: 0px;
+
+  @media(max-width: 720px) {
+    
+  }
 `;
+
 
 
 
@@ -210,22 +231,21 @@ class Home extends Component {
               />
               <button className="sbtn">Search</button>
             </div>
-            {/* <Form /> */}
-            <img src= "book-search.png" alt=""  />
+            <img src= "book-search.png" className="pic" alt=""  />
             <svg xmlns="http://www.w3.org/2000/svg" width="170.551" height="60.735" viewBox="0 0 170.551 60.735">
               <g id="Group_337" data-name="Group 337" transform="translate(0.683 1.003)" opacity="0.5">
                 <path id="Path_198" data-name="Path 198" d="M3538.283-513.006s28.477-26.6,61.956-27.807c35.078-1.262,75.959,23.625,100.712,51.216" transform="translate(-3538.283 540.859)" fill="none" stroke="#ffba48" stroke-width="2"/>
                 <path id="Path_199" data-name="Path 199" d="M22.488,0l5.583,26.7L0,22.488l18.625-5.235Z" transform="translate(137.967 33.361) rotate(-9)" fill="#ffba48"/>
               </g>
             </svg>
-            <img src="../assets/food.png" />
+            <img src="../assets/food.png" className="pic"/>
             <svg xmlns="http://www.w3.org/2000/svg" width="170.551" height="60.735" viewBox="0 0 170.551 60.735">
               <g id="Group_337" data-name="Group 337" transform="translate(0.683 1.003)" opacity="0.5">
                 <path id="Path_198" data-name="Path 198" d="M3538.283-513.006s28.477-26.6,61.956-27.807c35.078-1.262,75.959,23.625,100.712,51.216" transform="translate(-3538.283 540.859)" fill="none" stroke="#ffba48" stroke-width="2"/>
                 <path id="Path_199" data-name="Path 199" d="M22.488,0l5.583,26.7L0,22.488l18.625-5.235Z" transform="translate(137.967 33.361) rotate(-9)" fill="#ffba48"/>
               </g>
             </svg>
-          <img src="../assets/Group 331.png" />
+          <img src="../assets/Group 331.png" className="pic"/>
           </Header>
           <main>
             <h2 align="center" className="menu"> Scroll down to see MENU  <svg xmlns="http://www.w3.org/2000/svg" width="18.836" height="10.676" viewBox="0 0 18.836 10.676">

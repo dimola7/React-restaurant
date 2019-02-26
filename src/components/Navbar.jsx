@@ -62,6 +62,82 @@ const Navgroup = styled.nav`
     font-size: 14px;
     font-family: 'Open Sans', sans-serif;
   }
+ 
+  
+  #menu{
+    display: none;
+  }
+  @media(max-width: 720px) {
+  input:checked ~ .wrapper {
+    // max-height: 100%;
+    // background-color: white;
+    width: 100vh;
+    display: inline-block;
+    position: relative;
+    left: -5%;
+    margin-top: 39px;
+  }
+  input:checked ~ .wrapper{
+    position: relative;
+    left: -5%;         
+  }
+  .bar{
+    display: block;
+    background-color: #736e6e33;
+    width: 29px;
+    height: 2px;
+    border-radius: 1px;
+    margin: 8px;
+  }
+  .wrapper2{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 13px;
+    grid-gap: 8px;
+    margin-left: 90px;
+  }
+  .btn1{
+    height: 30px;
+    width: 80px;
+    background-color: #fff;
+    color: #EA2027;
+    border: 0;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 12px;
+  }
+  .btn2{
+    height: 30px;
+    width: 80px;
+    background-color: #fff;
+    color: #EA2027;
+    border: 0;
+    font-size: 12px;
+    border: none;
+    font-weight: 600;
+    margin-top: 12px;
+  }
+  
+.wrapper{
+  display: none;
+}
+
+#label{
+  display: inline-block;
+  background-color: #f1e3e64d;
+  height: auto;
+  position: fixed;
+  border-radius: 3px;
+  border: 2px solid #e8e8e8;
+  margin: 10px;
+  width: auto;
+  }
+  
+}
+// .bar{
+//   display: none;
+// }
+
 `; 
 
 class Navbar extends Component{
@@ -81,6 +157,13 @@ class Navbar extends Component{
     return(
       <Nav>
         <Navgroup>
+          <span>
+          <input type="checkbox" id="menu"/>
+          <label id="label" htmlFor="menu" >
+            <span className="bar"></span>
+            <span className="bar"></span>
+            <span className="bar"></span>
+          </label> 
           <div className="wrapper">
             <div className="left">
               <Link to="/"><img src={Logo} className='logo' alt="logo" /></Link>
@@ -99,11 +182,13 @@ class Navbar extends Component{
             <Link to="/signin">
               <button className="btn2">SIGN IN</button>
             </Link>
+            </div>  
+
             </div>
-             
-            </div>
+            
+               
           </div>
-          
+          </span>
         </Navgroup>
       </Nav>
     )
