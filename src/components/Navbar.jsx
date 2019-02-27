@@ -62,7 +62,11 @@ const Navgroup = styled.nav`
     font-size: 14px;
     font-family: 'Open Sans', sans-serif;
   }
- 
+  @media(min-width: 720px){
+  .logo3{
+    display: none;
+  }
+}
   
   #menu{
     display: none;
@@ -81,6 +85,15 @@ const Navgroup = styled.nav`
     position: relative;
     left: -5%;         
   }
+  .logo3{
+    width: 70px;
+    height: 70px;
+    float: right;
+    padding-bottom: 5px;
+  }
+  .logo{
+    display: none;
+  }
   .bar{
     display: block;
     background-color: #736e6e33;
@@ -97,7 +110,6 @@ const Navgroup = styled.nav`
     margin-left: 90px;
   }
   .btn1{
-    height: 30px;
     width: 80px;
     background-color: #fff;
     color: #EA2027;
@@ -113,7 +125,6 @@ const Navgroup = styled.nav`
     color: #EA2027;
     border: 0;
     font-size: 12px;
-    border: none;
     font-weight: 600;
     margin-top: 12px;
   }
@@ -126,7 +137,7 @@ const Navgroup = styled.nav`
   display: inline-block;
   background-color: #f1e3e64d;
   height: auto;
-  position: fixed;
+  // position: absolute;
   border-radius: 3px;
   border: 2px solid #e8e8e8;
   margin: 10px;
@@ -157,6 +168,7 @@ class Navbar extends Component{
     return(
       <Nav>
         <Navgroup>
+        <Link to="/"><img src={Logo} className='logo3' alt="logo" /></Link>
           <span>
           <input type="checkbox" id="menu"/>
           <label id="label" htmlFor="menu" >

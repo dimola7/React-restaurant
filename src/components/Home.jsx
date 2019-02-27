@@ -156,8 +156,8 @@ const HomeStyle = styled.div`
  }
  .menu {
   background-color: #EA2027;
-  color: #f1c40f;
-  padding: 15px;
+  color: #fff;
+  padding: 9px;
   margin-top: -40px;
   font-size: 17px;
   width: 100%;
@@ -173,7 +173,6 @@ const Header = styled.header`
   background-repeat: no-repeat;
   background-position: center;
   color: #fff;
-  margin-top: 0px;
 
   @media(max-width: 720px) {
     padding: 80px 20px;
@@ -255,7 +254,7 @@ class Home extends Component {
           </Header>
           <main>
             <h2 align="center" className="menu"> Scroll down to see MENU  <svg xmlns="http://www.w3.org/2000/svg" width="18.836" height="10.676" viewBox="0 0 18.836 10.676">
-              <path id="Path_200" data-name="Path 200" d="M3951-265l9.514,8.531,7.921-8.531" transform="translate(-3950.332 265.745)" fill="none" stroke="#ffba48" stroke-width="2"/>
+              <path id="Path_200" data-name="Path 200" d="M3951-265l9.514,8.531,7.921-8.531" transform="translate(-3950.332 265.745)" fill="none" stroke="#fff" stroke-width="2"/>
               </svg>
             </h2>
           <div class="btn-group">
