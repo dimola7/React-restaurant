@@ -48,7 +48,7 @@ const Navgroup = styled.nav`
     height: 30px;
     width: 80px;
     background-color: #EA2027;
-    color: #f1c40f;
+    color: #fff;
     border: 0;
     font-size: 12px;
     border: none;
@@ -137,6 +137,7 @@ h2{
 h2:hover{
   background-color: #EA2027;
   color: #fff;
+  padding: 12px 10px;
 }
 
 #label{
@@ -148,11 +149,7 @@ h2:hover{
   margin: 10px;
   width: auto;
   }
-  
 }
-// .bar{
-//   display: none;
-// }
 
 `; 
 

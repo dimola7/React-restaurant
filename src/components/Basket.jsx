@@ -138,7 +138,7 @@ h4{
   padding: 10px 30px;
 }
 .btn2{
-  color: #f1c40f;
+  color: #fff;
   background-color: #EA2027;
   padding: 10px 30px;
 }
