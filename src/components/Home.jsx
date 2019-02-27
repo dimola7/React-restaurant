@@ -95,10 +95,11 @@ const HomeStyle = styled.div`
  }
 }
 
+
 @media(min-width: 720px) {
 .menu {
   background-color: #EA2027;
-  color: #f1c40f;
+  color: #fff;
   padding: 15px;
   margin-top: -40px;
   font-size: 17px;

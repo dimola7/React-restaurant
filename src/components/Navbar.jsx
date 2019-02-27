@@ -66,6 +66,9 @@ const Navgroup = styled.nav`
   .logo3{
     display: none;
   }
+  .res{
+    display: none;
+  }
 }
   
   #menu{
@@ -109,35 +112,37 @@ const Navgroup = styled.nav`
     grid-gap: 8px;
     margin-left: 90px;
   }
-  .btn1{
-    width: 80px;
-    background-color: #fff;
+  p{
+    display: none;
+  }
+  .res{
     color: #EA2027;
-    border: 0;
-    font-size: 12px;
-    font-weight: 600;
-    margin-top: 12px;
+    margin-top: -90px;
+    margin-bottom:70px;
+  }
+  .btn1{
+    display: none;
   }
   .btn2{
-    height: 30px;
-    width: 80px;
-    background-color: #fff;
-    color: #EA2027;
-    border: 0;
-    font-size: 12px;
-    font-weight: 600;
-    margin-top: 12px;
+   display: none;
   }
   
 .wrapper{
   display: none;
+}
+h2{
+  font-size: 15px;
+  font-weight: 600;
+}
+h2:hover{
+  background-color: #EA2027;
+  color: #fff;
 }
 
 #label{
   display: inline-block;
   background-color: #f1e3e64d;
   height: auto;
-  // position: absolute;
   border-radius: 3px;
   border: 2px solid #e8e8e8;
   margin: 10px;
@@ -194,6 +199,20 @@ class Navbar extends Component{
             <Link to="/signin">
               <button className="btn2">SIGN IN</button>
             </Link>
+                  <div className="res">
+                  <Link to="/">
+                    <h2>Home</h2>
+                  </Link>
+                  <Link to="/feedback">
+                    <h2>Feedback</h2>
+                  </Link>
+                  <Link to="/signup">
+                    <h2>Sign Up</h2>
+                  </Link>
+                  <Link to="/signin">
+                    <h2>Sign In</h2>
+                  </Link>
+                  </div>
             </div>  
 
             </div>
