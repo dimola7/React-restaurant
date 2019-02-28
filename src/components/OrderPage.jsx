@@ -15,9 +15,6 @@ const OrderPageStyle = styled.div`
   section{
     padding-left: 40px;
   }
-  // h2{
-  //   margin: 0 0 15px 0;
-  
   h3{
       margin: 0 0 15px 0;
   }
@@ -47,6 +44,28 @@ const OrderPageStyle = styled.div`
     padding: 10px 80px; border: none;
     cursor: pointer;
   }
+
+.wrapper2{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 20px;
+}
+.btn3{
+  color: #fff;
+  padding: 0 30px 20px 12px ;f;
+  background-color: #EA2027;
+  border: none;
+  padding: 10px 15px 10px 15px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+input{
+  width: 25%; 
+  height: 100%;
+  text-align: center;
+}
+
   @media(max-width: 720px){
     .btn2{
       padding: 10px 20px;
@@ -122,6 +141,18 @@ class OrderPage extends Component {
                       </ul>
                       <h3>Description</h3>
                       <p>{meal.fields.Description}</p>
+                      <h4>Quantity</h4>
+                      <div className="wrapper2">
+                          <div className="minus">
+                            <button className="btn3">-</button>
+                          </div>
+                          <div className="counter">
+                            <input type="numeric" value="1" />
+                          </div>
+                          <div className="plus">
+                            <button className="btn3">+</button>
+                          </div>
+                      </div>
                       <button className="btn1"><img src={require('../../assets/basket.png')} alt="" height="21" width="21" /> Add to basket</button>
                     </section>
                   </Column>
@@ -134,7 +165,7 @@ class OrderPage extends Component {
                   </div>     
               <div className="right">
               <button className="btn2" onClick = {this.sweetalertfunction}>Order Now</button>
-              </div>                     
+              </div>                        
             </div>
               </Fragment>
             ) }
@@ -146,6 +177,5 @@ class OrderPage extends Component {
     );
   }
 }
-
 
 export default OrderPage;

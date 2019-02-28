@@ -9,7 +9,6 @@ import Footer from './Footer';
 import Container from './Container';
 import Navbar from './Navbar';
 
-
 const HomeStyle = styled.div`
   header, footer{
     text-align: center;
