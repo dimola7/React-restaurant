@@ -53,6 +53,12 @@ const Foot = styled.footer`
       display: grid;
       grid-template-columns: 1fr;
     }
+    .service{
+      display: none;
+    }
+    .info{
+      display: none;
+    }
   }
 `;
 
