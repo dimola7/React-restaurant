@@ -119,6 +119,7 @@ const Navgroup = styled.nav`
     color: #EA2027;
     margin-top: -90px;
     margin-bottom:70px;
+    padding-right: 220px;
   }
   .btn1{
     display: none;

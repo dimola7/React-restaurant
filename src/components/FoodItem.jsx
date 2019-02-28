@@ -21,6 +21,7 @@ const FoodItemStyle = styled.div`
     margin: 6px 0;
     font-weight: 300;
     font-size: 20px;
+      
   }
   a{
     color: #f1c40f;
