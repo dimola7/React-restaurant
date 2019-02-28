@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './components/Home';
-import SinglePage from './components/SinglePage';
+import OrderPage from './components/OrderPage';
 import GlobalStyle from './components/GlobalStyle';
 import LoginPage from './components/LoginPage';
 import signupPage from './components/signupPage';
@@ -16,7 +16,7 @@ const Routes = () => (
       <GlobalStyle />
       <Switch>
         <Route exact path="/" component={Home}></Route>
-        <Route path="/meal/:id" component={SinglePage}></Route>
+        <Route path="/meal/:id" component={OrderPage}></Route>
         <Route path="/signin" component={LoginPage}></Route>
         <Route path="/signup" component={signupPage}></Route>
         <Route path="/navbar" component={Navbar}></Route>

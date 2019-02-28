@@ -1,75 +1,61 @@
 import React, { Fragment, Component } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
+import Footer from './Footer';
 import { Grid, Column } from './Grid';
 import Container from './Container';
+import Header from './Header';
 import swal from 'sweetalert';
-import Navbarb from './Navbarb';
+import { Link } from 'react-router-dom';
 
 
-const SinglePageStyle = styled.div`
+
+const OrderPageStyle = styled.div`
   margin: 50px 0;
   section{
     padding-left: 40px;
   }
-  h2{
-    margin: 0 0 15px 0;
-    h3{
-      margin: 0 0 15px 0;
-      color: red;
-  }
-  img{
-    width: 100%;
-  }
-  ul{
-    margin: 20px 0;
-  }
-  .buttonb{
-    display: inline-block;
-    border-radius: 0;
-    background-color: #fff;
-    color: #EA2027;
-    text-align: center;
-    padding: 10px;
-    width: 250px;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin: 5px;
-    border: 2px solid rgb(255,0,0, .5);
-    font-size:15px;
-    width: 30%;
-    margin-left: 40%;
-    margin-right: 45%;
-    height: 40px;
-  }
+  // h2{
+  //   margin: 0 0 15px 0;
   
-  button {
-    height: 35px;
-    width: 100px;
+  h3{
+      margin: 0 0 15px 0;
+  }
+  .price{
+    margin-top: -60px;
+  }
+  .name{
+    margin-top: -60px;
+  }
+  .btn1{
+    color: #EA2027;
+    background-color: #fff;
+    padding: 8px 70px;
+  }
+  .img{
+    margin-top: -120px;
+  }
+  .wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 40px;
+  }
+  .btn2{
+    color: #fff;
     background-color: #EA2027;
-    color: #f1c40f;
-    border: 0;
-    font-size: 14px;
-    float: right;
+    padding: 10px 80px;
+    padding: 10px 80px; border: none;
+    cursor: pointer;
   }
-  section{
-    background-color: red;
-  }
-  small{
-    margin-left: 5px;
-    font-size: 16px;
-    color: #999;
-    &::before{
-      content: '(';
+  @media(max-width: 720px){
+    .btn2{
+      padding: 10px 20px;
     }
-    &::after{
-      content: ')';
-    }
-    
   }
+
 `;
 
-class SinglePage extends Component {
+class OrderPage extends Component {
   constructor(props) {
     super(props);
     this.sweetalertfunction = this.sweetalertfunction.bind(this),
@@ -81,12 +67,8 @@ class SinglePage extends Component {
   
   sweetalertfunction () {
     console.log('button clicks');
-    swal("Please enter delivery address:", {
-      content: "input",
-    })
-    .then((value) => {
       swal("Thank you!", "Your order has been placed", "success");
-    });
+    ;
   }
 
   componentDidMount() {
@@ -108,8 +90,8 @@ class SinglePage extends Component {
     const { ready, meal } = this.state;
     return (
       <Fragment>
-        <Navbarb />
-        <SinglePageStyle>
+        <Header />
+        <OrderPageStyle>
           <Container>
             { ready === 'loading' ? (<h1>Loading content...</h1>) : '' }
             { ready === 'loaded' && (
@@ -119,18 +101,17 @@ class SinglePage extends Component {
                   </Column>
                   <Column columns="2">
                     <section>
-                      <h1>{meal.fields.Name}</h1>
-                  
+                      <h1 className="name">{meal.fields.Name}</h1>
                     </section>
                   </Column>
                 </Grid>
                 <Grid>
                   <Column columns="2">
-                  <img src={require('../../assets/cake.png')} alt=""  />
+                    <img src={meal.fields.Icon[0].thumbnails.large.url}  alt="Meal" className="img" height="300"/>
                   </Column>
                   <Column columns="2">
-                    <section>
-                      <h2>Price:{meal.fields.Price}</h2>
+                    <section className="right">
+                      <h2 className="price">Price:{meal.fields.Price}</h2>
                       <ul>
                         { meal.fields.Prices && meal.fields.Prices.map((prices, index) => (
                           <li key={index}>{price}</li>
@@ -138,20 +119,30 @@ class SinglePage extends Component {
                       </ul>
                       <h3>Description</h3>
                       <p>{meal.fields.Description}</p>
-                      <button  onClick = {this.sweetalertfunction} class="button" >Order Now</button>
-                      <button className="buttonb"><span><img src={require('../../assets/basket.png' )} alt="" height="21" width="21" /> Basket </span>
-                        </button>
+                      <button className="btn1"><img src={require('../../assets/basket.png')} alt="" height="21" width="21" /> Add to basket</button>
                     </section>
                   </Column>
                 </Grid>
+                <div className="wrapper">
+                  <div className="left">
+                    <Link to="/">
+                      <button className="btn2">Back to Menu</button>
+                    </Link>
+                  </div>     
+              <div className="right">
+              <button className="btn2" onClick = {this.sweetalertfunction}>Order Now</button>
+              </div>                     
+            </div>
               </Fragment>
             ) }
+            
           </Container>
-        </SinglePageStyle>
+        </OrderPageStyle>
+        <Footer />
       </Fragment>
     );
   }
 }
 
 
-export default SinglePage;
+export default OrderPage;
