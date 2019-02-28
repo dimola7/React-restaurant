@@ -101,9 +101,10 @@ const HomeStyle = styled.div`
   padding: 15px;
   margin-top: -40px;
   font-size: 17px;
-  width: 67.3%;
+  // width: 67.3%;
+  width: 100%;
   position: relative;
-  left: 219px;
+  // left: 219px;
 }
 }
 .form{
@@ -180,7 +181,8 @@ const HomeStyle = styled.div`
 const Header = styled.header`
   padding: 150px 20px;
   background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(${FoodBg});
-  background-size: 898px;
+  background-size: 100%;
+  // background-size: 898px;
   background-repeat: no-repeat;
   background-position: center;
   color: #fff;
