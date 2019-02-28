@@ -95,7 +95,6 @@ const HomeStyle = styled.div`
  }
 }
 
-
 @media(min-width: 720px) {
 .menu {
   background-color: #EA2027;

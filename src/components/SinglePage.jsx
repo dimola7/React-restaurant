@@ -6,6 +6,8 @@ import { Grid, Column } from './Grid';
 import Container from './Container';
 import Header from './Header';
 import swal from 'sweetalert';
+import { Link } from 'react-router-dom';
+
 
 
 const SinglePageStyle = styled.div`
@@ -13,11 +15,42 @@ const SinglePageStyle = styled.div`
   section{
     padding-left: 40px;
   }
-  h2{
-    margin: 0 0 15px 0;
+  // h2{
+  //   margin: 0 0 15px 0;
   
   h3{
       margin: 0 0 15px 0;
+  }
+  .price{
+    margin-top: -60px;
+  }
+  .name{
+    margin-top: -60px;
+  }
+  .btn1{
+    color: #EA2027;
+    background-color: #fff;
+    padding: 8px 70px;
+  }
+  .img{
+    margin-top: -120px;
+  }
+  .wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 40px;
+  }
+  .btn2{
+    color: #fff;
+    background-color: #EA2027;
+    padding: 10px 80px;
+    border: none;
+    cursor: pointer;
+  }
+  @media(max-width: 720px){
+    .btn2{
+      padding: 10px 20px;
+    }
   }
 
 `;
@@ -68,18 +101,17 @@ class SinglePage extends Component {
                   </Column>
                   <Column columns="2">
                     <section>
-                      <h1>{meal.fields.Name}</h1>
-                  
+                      <h1 className="name">{meal.fields.Name}</h1>
                     </section>
                   </Column>
                 </Grid>
                 <Grid>
                   <Column columns="2">
-                    <img src={meal.fields.Icon[0].thumbnails.large.url} className="img" alt="Meal" />
+                    <img src={meal.fields.Icon[0].thumbnails.large.url}  alt="Meal" className="img" height="300"/>
                   </Column>
                   <Column columns="2">
-                    <section>
-                      <h2>Price:{meal.fields.Price}</h2>
+                    <section className="right">
+                      <h2 className="price">Price:{meal.fields.Price}</h2>
                       <ul>
                         { meal.fields.Prices && meal.fields.Prices.map((prices, index) => (
                           <li key={index}>{price}</li>
@@ -87,14 +119,23 @@ class SinglePage extends Component {
                       </ul>
                       <h3>Description</h3>
                       <p>{meal.fields.Description}</p>
-                      <button className="button" onClick = {this.sweetalertfunction}>
-                        <span> Order Now</span>
-                      </button>
+                      <button className="btn1"><img src={require('../../assets/basket.png')} alt="" height="21" width="21" /> Add to basket</button>
                     </section>
                   </Column>
                 </Grid>
+                <div className="wrapper">
+                  <div className="left">
+                    <Link to="/">
+                      <button className="btn2">Back to Menu</button>
+                    </Link>
+                  </div>     
+              <div className="right">
+              <button className="btn2" onClick = {this.sweetalertfunction}>Order Now</button>
+              </div>                     
+            </div>
               </Fragment>
             ) }
+            
           </Container>
         </SinglePageStyle>
         <Footer />
