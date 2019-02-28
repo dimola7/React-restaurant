@@ -51,6 +51,9 @@ const OrderPageStyle = styled.div`
     .btn2{
       padding: 10px 20px;
     }
+    .btn1{
+      padding: 8px 40px;
+    }
   }
 
 `;
