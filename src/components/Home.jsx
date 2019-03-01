@@ -95,7 +95,7 @@ const HomeStyle = styled.div`
  }
 }
 .img-btn{
-  // opacity: 0;
+  opacity: 0;
   position: relative;
   bottom: 320px;
   height: 82%;
@@ -104,7 +104,6 @@ const HomeStyle = styled.div`
   border: none;
 
   @media(max-width: 720px){
-    // opacity: 0;
     position: relative;
     bottom: 180px;
     height: 60px;
