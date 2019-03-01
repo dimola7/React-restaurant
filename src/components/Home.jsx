@@ -329,7 +329,7 @@ class Home extends Component {
                   <Column columns="3" key={meal.id}>
                     <Link to={`/meal/${meal.id}`}>
                     <FoodItem image={meal.fields.Icon ? meal.fields.Icon[0].url : ''} >
-                      <h3><Link to={`/meal/${meal.id}`}>{meal.fields.Name}</Link></h3>
+                      <h3>{meal.fields.Name}</h3>
                       <h3>{meal.fields.Price}</h3>
                     </FoodItem>
                     </Link>
