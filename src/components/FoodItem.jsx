@@ -5,6 +5,7 @@ const FoodItemStyle = styled.div`
   height: 320px; rgba(0, 0, 0, .2);
   background: #EA2027;
   color: #fff;
+  text-decoration: none;
   overflow: hidden;
   img{
     width: 100%;
@@ -21,7 +22,6 @@ const FoodItemStyle = styled.div`
     margin: 6px 0;
     font-weight: 300;
     font-size: 20px;
-      
   }
   a{
     color: #fff;

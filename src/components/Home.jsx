@@ -19,6 +19,9 @@ const HomeStyle = styled.div`
   span {
     display: block;
 }
+a{
+  text-decoration: none;
+}
  Header{
    margin-top: 0px;
  }
@@ -38,6 +41,7 @@ const HomeStyle = styled.div`
     display: inline;
     margin: 0px 40px 0px 0px;
     align: left;
+    text-decoration: none;
 }
 .buttonb{
   display: inline-block;
@@ -94,25 +98,25 @@ const HomeStyle = styled.div`
   bottom: 70px;
  }
 }
-.img-btn{
-  opacity: 0;
-  position: relative;
-  bottom: 320px;
-  height: 82%;
-  width: 100%;
-  cursor: pointer;
-  border: none;
+// .img-btn{
+//   opacity: 0;
+//   position: relative;
+//   bottom: 320px;
+//   height: 82%;
+//   width: 100%;
+//   cursor: pointer;
+//   border: none;
 
-  @media(max-width: 720px){
-    position: relative;
-    bottom: 180px;
-    height: 60px;
-    width: 100%;
-    cursor: pointer;
-    border: none;
-  }
+//   @media(max-width: 720px){
+//     position: relative;
+//     bottom: 180px;
+//     height: 60px;
+//     width: 100%;
+//     cursor: pointer;
+//     border: none;
+//   }
     
-}
+// }
 
 @media(min-width: 720px) {
 .menu {
@@ -323,11 +327,13 @@ class Home extends Component {
                 {ready === 'loading' ? 'Loading...' : ''}
                 {filtered.map(meal => (
                   <Column columns="3" key={meal.id}>
+                    <Link to={`/meal/${meal.id}`}>
                     <FoodItem image={meal.fields.Icon ? meal.fields.Icon[0].url : ''} >
                       <h3><Link to={`/meal/${meal.id}`}>{meal.fields.Name}</Link></h3>
                       <h3>{meal.fields.Price}</h3>
                     </FoodItem>
-                    <Link to={`/meal/${meal.id}`}><button className="img-btn">click</button></Link>
+                    </Link>
+                    {/* <Link to={`/meal/${meal.id}`}><button className="img-btn">click</button></Link> */}
 
                   </Column>
                 ))}

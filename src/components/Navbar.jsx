@@ -31,6 +31,7 @@ const Navgroup = styled.nav`
 
   .home{
     margin-left: 30px;
+    color: EA2027;
   }
 
   .btn1{
