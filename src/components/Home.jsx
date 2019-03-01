@@ -53,7 +53,8 @@ const HomeStyle = styled.div`
   border: 2px solid rgb(255,0,0, .5);
   font-size:15px;
   width: 20%;
-  margin-left: 68%;
+  margin-left: 12%;
+  // margin-left: 68%;
   margin-right: 5%;
   margin-top: 5%;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.01);
@@ -92,6 +93,20 @@ const HomeStyle = styled.div`
   position: relative;
   bottom: 70px;
  }
+}
+.img-btn{
+  opacity: 0;
+  position: relative;
+  bottom: 320px;
+  height: 82%;
+  width: 100%;
+  cursor: pointer;
+  border: none;
+
+  @media(max-width: 720px){
+    height: 280px;
+  }
+    
 }
 
 @media(min-width: 720px) {
@@ -307,6 +322,8 @@ class Home extends Component {
                       <h3><Link to={`/meal/${meal.id}`}>{meal.fields.Name}</Link></h3>
                       <h3>{meal.fields.Price}</h3>
                     </FoodItem>
+                    <Link to={`/meal/${meal.id}`}><button className="img-btn">click</button></Link>
+
                   </Column>
                 ))}
               </Grid>

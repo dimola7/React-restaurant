@@ -4,7 +4,7 @@ import Logo from '../../assets/logo_transparent.png';
 import styled from 'styled-components';
 
 const Nav = styled.div`
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 `;
 
 const Navgroup = styled.nav`
