@@ -143,6 +143,7 @@ class OrderPage extends Component {
                       <p>{meal.fields.Description}</p>
                       <h4>Quantity</h4>
                       <div className="wrapper2">
+                          
                           <div className="minus">
                             <button className="btn3">-</button>
                           </div>

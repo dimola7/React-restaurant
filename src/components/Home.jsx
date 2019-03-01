@@ -189,6 +189,7 @@ const Header = styled.header`
 
   @media(max-width: 720px) {
     padding: 80px 20px;
+    background-size: 898px;
   }
 `;
 
