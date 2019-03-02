@@ -93,11 +93,27 @@ class OrderPage extends Component {
     this.state = {
       meal: {},
       ready: 'initial',
+      clicks:0,
+      show:true
     }
   };
-  
-  
-  
+
+  incrementCount(){
+        this.setState({
+          count: this.state.count + 1
+        });
+      }
+  decrementCount(){
+        this.setState({
+          count: this.state.count - 1
+        });
+      }
+
+  getInitialState(){
+    this.state = {
+      count : 0
+    }
+  }
   
   sweetalertfunction () {
     console.log('button clicks');
@@ -157,13 +173,11 @@ class OrderPage extends Component {
                       <div className="wrapper2">
                           
                           <div className="minus">
-                            <button className="btn3" >-</button>
+                            <button className="btn3" onClick={this.decrementCount} >-</button>
                           </div>
-                          <div className="counter">
-                            <input type="numeric" value="1" />
-                          </div>
+                          <div>{this.state.count}</div>
                           <div className="plus">
-                            <button className="btn3" >+</button>
+                            <button className="btn3" onClick={this.incrementCount} >+</button>
                           </div>
                       </div>
                       <button className="btn1"><img src={require('../../assets/basket.png')} alt="" height="21" width="21" /> Add to basket</button>

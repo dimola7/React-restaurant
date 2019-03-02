@@ -26,7 +26,7 @@ a{
    margin-top: 0px;
  }
  h1{
-  color: #f1c40f;
+  color: #fff;
   position: relative;
   bottom: 100px;
  }

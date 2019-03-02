@@ -5,7 +5,8 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
   ::selection {
-    background-color: #f1c40f; 
+    background-color: #EA2027; 
+    color: #fff;
   }
 `;
 

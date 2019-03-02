@@ -12,7 +12,7 @@ const Navgroup = styled.nav`
     display: grid;
     grid-template-columns: 1fr 3fr;
     grid-gap: 390px;
-    margin-bottom: -10px;
+    margin-bottom: -13px;
   }
   .logo{
     width: 80px;
