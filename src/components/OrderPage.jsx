@@ -81,8 +81,8 @@ input{
     }
     .img{
       position: relative;
-      left: 50px;
-      height: 150px
+      left: 40px;
+      height: 180px
 
     }
   }
