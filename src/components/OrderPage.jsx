@@ -178,16 +178,16 @@ class OrderPage extends Component {
                       <h3>Description</h3>
                       <p>{meal.fields.Description}</p>
                       <h4>Quantity</h4>
-                      {/* <div className="wrapper2">
+                      <div className="wrapper2">
                           
                           <div className="minus">
-                            <button className="btn3" onClick={this.decrementCount} >-</button>
+                            <button className="btn3">-</button>
                           </div>
                           <div>{this.state.count}</div>
                           <div className="plus">
-                            <button className="btn3" onClick={this.incrementCount} >+</button>
+                            <button className="btn3">+</button>
                           </div>
-                      </div> */}
+                      </div>
                       <button className="btn1"><img src={require('../../assets/basket.png')} alt="" height="21" width="21" /> Add to basket</button>
                     </section>
                   </Column>
