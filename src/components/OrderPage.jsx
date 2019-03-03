@@ -80,7 +80,10 @@ input{
       margin-bottom: 60px;
     }
     .img{
-      right: 70px;
+      position: relative;
+      left: 50px;
+      height: 150px
+
     }
   }
 
@@ -98,22 +101,27 @@ class OrderPage extends Component {
     }
   };
 
-  incrementCount(){
-        this.setState({
-          count: this.state.count + 1
-        });
-      }
-  decrementCount(){
-        this.setState({
-          count: this.state.count - 1
-        });
-      }
+  // incrementCount = () => {
+  //         count: this.state.count + 1
+  //       };
 
-  getInitialState(){
-    this.state = {
-      count : 0
-    }
-  }
+  // decrementCount(){
+  //       this.setState({
+  //         count: this.state.count - 1
+  //       });
+  //     }
+
+
+  // getInitialState(){
+  //   count: 0
+  //   this.state = {
+  //         meal: {},
+  //         ready: 'initial',
+  //         clicks:0,
+  //         show:true,
+  //         count: 0
+  //       }
+  // }
   
   sweetalertfunction () {
     console.log('button clicks');
@@ -170,7 +178,7 @@ class OrderPage extends Component {
                       <h3>Description</h3>
                       <p>{meal.fields.Description}</p>
                       <h4>Quantity</h4>
-                      <div className="wrapper2">
+                      {/* <div className="wrapper2">
                           
                           <div className="minus">
                             <button className="btn3" onClick={this.decrementCount} >-</button>
@@ -179,7 +187,7 @@ class OrderPage extends Component {
                           <div className="plus">
                             <button className="btn3" onClick={this.incrementCount} >+</button>
                           </div>
-                      </div>
+                      </div> */}
                       <button className="btn1"><img src={require('../../assets/basket.png')} alt="" height="21" width="21" /> Add to basket</button>
                     </section>
                   </Column>
