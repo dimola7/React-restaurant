@@ -186,6 +186,9 @@ a{
   #food{
     display: none;
   }
+  h3{
+    margin: 0px 10px 0px 0px;
+  }
   
 .pic{
    display: none;
