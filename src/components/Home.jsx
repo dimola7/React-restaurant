@@ -95,7 +95,7 @@ a{
  h1{
   color: #fff;
   position: relative;
-  bottom: 70px;
+  bottom: 20px;
  }
 }
 // .img-btn{
@@ -141,7 +141,7 @@ a{
   padding: 10px;
   width: 100%;
   position: relative;
-  bottom: 40px;
+  bottom: -20px;
   ::placeholder{
     color: rgb(255,0,0, .5);
   }
@@ -157,6 +157,8 @@ a{
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
+  position: relative;
+  bottom: -40px;
 }
 
 @media(min-width: 720px) {
@@ -215,7 +217,7 @@ const Header = styled.header`
   color: #fff;
 
   @media(max-width: 720px) {
-    padding: 80px 20px;
+    padding: 40px 20px;
     background-size: 898px;
   }
 `;
