@@ -93,7 +93,7 @@ a{
   }
 
  h1{
-  color: #f1c40f;
+  color: #fff;
   position: relative;
   bottom: 70px;
  }
