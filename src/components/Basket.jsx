@@ -2,7 +2,6 @@ import React, { Fragment, Component } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
 import Checkout from './Checkout';
-import Container from './Container';
 import { Link } from 'react-router-dom';
 import swal from 'sweetalert';
 
@@ -37,6 +36,8 @@ body{
   .wrapper2{
     grid-gap: 50px;
     grid-template-columns: 1fr;
+    // margin-right: 40px;
+    margin-left: -20px;
   }
 }
 .left2{
@@ -131,6 +132,19 @@ h4{
     margin-top: 40px;
     grid-gap: 20px;
   }
+  input{
+    background-color: #EA2027;
+    border: none;
+    width: 280px;
+    height: 40px;
+  }
+  .short{
+    width: 130px;
+  }
+  .wrapper3{
+    position: relative;
+    right: 90px;
+  }
 }
 .btn1{
   color: #EA2027;
@@ -166,6 +180,10 @@ h4{
         );
       ;
     }
+    // componentWillUpdate = (nextProps, nextState) => {
+    //   localStorage.setItem('meals', 'meh');
+    // }
+
  
   render() {
     const { ready, meal } = this.state;
