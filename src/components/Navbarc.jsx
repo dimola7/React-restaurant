@@ -24,7 +24,7 @@ const Navgroup = styled.nav`
   }
   .wrapper2{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     margin-top: 13px;
     grid-gap: 8px;
   }
@@ -143,7 +143,7 @@ h2:hover{
 
 `; 
 
-class Navbarb extends Component{
+class Navbarc extends Component{
   constructor() {
     super();
     this.state = {
@@ -180,18 +180,12 @@ class Navbarb extends Component{
                 <Link to="/feedback">
                   <p>Feedback</p>
                 </Link>
-                <Link to="/basket">
-            <button className="buttonb"><span><img src={require('../../assets/basket.png' )} alt="" height="21" width="21" /> Basket </span>
-            </button></Link>
                   <div className="res">
                   <Link to="/">
                     <h2>Home</h2>
                   </Link>
                   <Link to="/feedback">
                     <h2>Feedback</h2>
-                  </Link>
-                  <Link to="/basket">
-                    <h2>Basket</h2>
                   </Link>
                   </div>
             </div>  
@@ -208,4 +202,4 @@ class Navbarb extends Component{
   
 };
 
-export default Navbarb;
+export default Navbarc;

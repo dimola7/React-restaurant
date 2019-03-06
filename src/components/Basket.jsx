@@ -4,6 +4,8 @@ import axios from 'axios';
 import Checkout from './Checkout';
 import { Link } from 'react-router-dom';
 import swal from 'sweetalert';
+import Navbarc from './Navbarc';
+
 
 const BasketStyle = styled.div`
 body{
@@ -107,6 +109,9 @@ table th {
     width: 170px;
   }
 }
+.right3{
+  position: relative;
+}
 .grid-input{
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -189,6 +194,8 @@ h4{
     const { ready, meal } = this.state;
     return (
       <Fragment>
+        <Navbarc />
+        <hr className="line"></hr>
         <Checkout />
         <BasketStyle>
           <div className="wrapper">

@@ -7,6 +7,7 @@ import Container from './Container';
 import Header from './Header';
 import swal from 'sweetalert';
 import { Link } from 'react-router-dom';
+import Navbarb from './Navbarb';
 
 
 
@@ -36,6 +37,7 @@ const OrderPageStyle = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-left: 40px;
+    grid-gap: 100px;
   }
   .btn2{
     color: #fff;
@@ -148,7 +150,9 @@ class OrderPage extends Component {
     const { ready, meal } = this.state;
     return (
       <Fragment>
-        <Header />
+        {/* <Header /> */}
+        <Navbarb />
+        <hr className="line"></hr>
         <OrderPageStyle>
           <Container>
             { ready === 'loading' ? (<h1>Loading content...</h1>) : '' }

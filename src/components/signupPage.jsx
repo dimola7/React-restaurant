@@ -1,7 +1,5 @@
 import React, { Fragment, Component } from 'react';
 import styled from 'styled-components';
-import axios from 'axios';
-import Container from './Container';
 import logo from './logo_transparent.png';
 import { Link } from 'react-router-dom';
 
