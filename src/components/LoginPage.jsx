@@ -1,7 +1,5 @@
 import React, { Fragment, Component } from 'react';
 import styled from 'styled-components';
-import axios from 'axios';
-import Container from './Container';
 import logo from './logo_transparent.png';
 import { Link } from 'react-router-dom';
 
@@ -95,6 +93,59 @@ a{
   text-decoration: none;
   color: #f1c40f;
 }
+@media only screen 
+and (min-device-width : 768px) and (max-device-width : 1024px){
+  .right img{
+    height: 0vh;
+    width: 0%;
+    }
+    .wrapper{
+      display: grid;
+      grid-template-columns: 1fr;
+      margin-top:80px;
+      margin-left: 0px;
+    }
+    p{
+      margin-top: 200px;
+      margin-left: 300px;
+      font-size: 12px;
+      color: #fff;
+    }
+    .button{
+      background-color: #f1c40f;
+      color: #EA2027;
+      position: relative;
+      top: 160px;
+      left: -150px;
+      border: none;
+      padding: 10px 30px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    input{
+      border-top: none;
+      border-bottom:
+      width: 190px;
+      height: 20px;
+      color: black;
+      font-size: 14px;
+      font-weight: 600;
+      margin-left: 280px;
+      position: relative;
+      top: 50px;
+    }
+    .logo{
+      position: relative;
+      left: 180px;
+    }
+    h2{
+      color: #fff;
+      font-size: 16px;
+      margin-left: 280px;
+      position: relative;
+      top: 50px;
+    }
+}
 `;
 
 
@@ -113,7 +164,7 @@ class LoginPage extends Component {
       <LoginPageStyle>
         <div className="wrapper">
           <div className="left">
-          <img style={{ width: '80px', height: '80px' }} src={logo} alt="" />
+          <img style={{ width: '80px', height: '80px' }} className="logo" src={logo} alt="" />
           <h1>Welcome Back!!</h1>
           <h2>Email</h2>
           <input type="email" />

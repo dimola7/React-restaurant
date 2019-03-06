@@ -139,6 +139,15 @@ h2:hover{
   margin: 10px;
   width: auto;
   }
+@media only screen 
+and (min-device-width : 768px) and (max-device-width : 1024px){
+    .wrapper{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 290px;
+    margin-bottom: -13px;
+  }
+}
 }
 
 `; 

@@ -74,7 +74,7 @@ h2{
 input{
   border-top: none;
   border-bottom:
-  width: 175px;
+  width: 190px;
   height: 20px;
   color: black;
   font-size: 14px;
@@ -101,6 +101,68 @@ p{
 a{  
   text-decoration: none;
   color: #f1c40f;
+}
+@media only screen 
+and (min-device-width : 768px) and (max-device-width : 1024px){
+  .right img{
+    height: 0vh;
+    width: 0%;
+    }
+  .wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top:80px;
+    margin-left: 0px;
+  }
+  .left img{
+    position: relative;
+    left: 250px;
+    top: 30px;
+  }
+  input{
+    border-top: none;
+    border-bottom:
+    width: 320px;
+    height: 30px;
+    color: black;
+    font-size: 14px;
+    font-weight: 600;
+    position: relative;
+    left: 250px;
+    top: 40px;
+  }
+  .button{
+    background-color: #f1c40f;
+    color: #EA2027;
+    position: relative;
+    top: 120px;
+    right: -90px;
+    border: none;
+    padding: 10px 30px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  p{
+    position: relative;
+    top: 90px;
+    left: 220px;
+    font-size: 12px;
+    color: #fff;
+  }
+  h2{
+    color: #fff;
+    font-size: 14px;
+    position: relative;
+    left: 250px;
+    top: 40px;
+  }
+  .wrapper2{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .wrapper2 input{
+    width: 190px;
+  }
 }
 
 `;

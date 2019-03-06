@@ -186,6 +186,12 @@ a{
   position: relative;
 }
 }
+@media only screen 
+and (min-device-width : 768px) and (max-device-width : 1024px){
+  h3{
+    margin: 0px 10px 0px 0px;
+  }
+}
  `;
 
 const Header = styled.header`

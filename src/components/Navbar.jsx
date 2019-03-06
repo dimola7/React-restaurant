@@ -75,6 +75,21 @@ const Navgroup = styled.nav`
   #menu{
     display: none;
   }
+  @media only screen 
+  and (min-device-width : 768px) and (max-device-width : 1024px){
+    .wrapper{
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      grid-gap: 160px;
+      margin-bottom: -13px;
+    }
+    .logo{
+      width: 80px;
+      height: 80px;
+      position: relative;
+      right: 70px;
+    }
+  }
   @media(max-width: 720px) {
   input:checked ~ .wrapper {
     // max-height: 100%;

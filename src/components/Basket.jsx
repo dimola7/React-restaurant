@@ -34,6 +34,41 @@ body{
   grid-template-columns:1fr 1fr;
   grid-gap: 50px;
 }
+@media only screen 
+and (min-device-width : 768px) and (max-device-width : 1024px){
+  .wrapper{
+    display:grid;
+    grid-template-columns:3fr 1fr;
+    grid-gap: 50px;
+  }
+  .wrapper2{
+    display:grid;
+    grid-template-columns:1fr;
+    grid-gap: 50px;
+  }
+  .wrapper3{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 50px;
+  }
+  .left2{
+    background:#fff;
+    position: relative;
+    left: -30px;
+  }
+  .right{
+    background: #EA2027;
+    margin-right: 0px;
+    position: relative;
+    right: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .img{
+    position: relative;
+    right: 40px;
+  }
+}
 @media(max-width: 720px){
   .wrapper2{
     grid-gap: 50px;
