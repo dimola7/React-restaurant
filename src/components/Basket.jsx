@@ -128,7 +128,7 @@ const BasketStyle = styled.div`
   }
   table td {
     padding: 1rem;
-    color: #f1c40f;
+    color: #fff;
     font-weight: 600;
   }
   table th {
@@ -196,9 +196,6 @@ const BasketStyle = styled.div`
   }
   .left3 {
     margin-left: 150px;
-  }
-  .swal {
-    background-color: red;
   }
 `;
 

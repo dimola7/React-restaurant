@@ -184,7 +184,7 @@ class OrderPage extends Component {
                       </ul>
                       <h3>Description</h3>
                       <p>{meal.fields.Description}</p>
-                      <h4>Quantity</h4>
+                      {/* <h4>Quantity</h4>
                       <div className="wrapper2">
                         <div className="minus">
                           <button className="btn3">-</button>
@@ -193,7 +193,7 @@ class OrderPage extends Component {
                         <div className="plus">
                           <button className="btn3">+</button>
                         </div>
-                      </div>
+                      </div> */}
                       <button
                         className="btn1"
                         onClick={() => {
