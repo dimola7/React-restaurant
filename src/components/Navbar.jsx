@@ -24,7 +24,7 @@ const Navgroup = styled.nav`
   }
   .wrapper2{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     margin-top: 13px;
     grid-gap: 8px;
   }
@@ -204,9 +204,6 @@ class Navbar extends Component{
                 <Link to="/">
                   <p className="home">Home</p>
                 </Link>
-                <Link to="/feedback">
-                  <p>Feedback</p>
-                </Link>
             <Link to="/signup">
               <button className="btn1">SIGN UP</button>
             </Link>
@@ -216,9 +213,6 @@ class Navbar extends Component{
                   <div className="res">
                   <Link to="/">
                     <h2>Home</h2>
-                  </Link>
-                  <Link to="/feedback">
-                    <h2>Feedback</h2>
                   </Link>
                   <Link to="/signup">
                     <h2>Sign Up</h2>

@@ -9,7 +9,7 @@ import swal from 'sweetalert';
 import { Link } from 'react-router-dom';
 import Navbarb from './Navbarb';
 
-
+// import MyProvider from './Contextapi';
 
 const OrderPageStyle = styled.div`
   margin: 50px 0;
@@ -94,14 +94,14 @@ input{
 class OrderPage extends Component {
   constructor(props) {
     super(props);
-    this.sweetalertfunction = this.sweetalertfunction.bind(this),
-    this.state = {
-      meal: {},
-      ready: 'initial',
-      clicks:0,
-      show:true
-    }
-  };
+    (this.sweetalertfunction = this.sweetalertfunction.bind(this)),
+      (this.state = {
+        meal: {},
+        ready: 'initial',
+        clicks: 0,
+        show: true
+      });
+  }
 
   // incrementCount = () => {
   //         count: this.state.count + 1
@@ -113,7 +113,6 @@ class OrderPage extends Component {
   //       });
   //     }
 
-
   // getInitialState(){
   //   count: 0
   //   this.state = {
@@ -124,25 +123,26 @@ class OrderPage extends Component {
   //         count: 0
   //       }
   // }
-  
-  sweetalertfunction () {
+
+  sweetalertfunction() {
     console.log('button clicks');
-      swal("Thank you!", "Your order has been placed", "success");
-    ;
+    swal('Thank you!', 'Your order has been placed', 'success');
   }
 
   componentDidMount() {
-    const { match : { params } } = this.props;
+    const {
+      match: { params }
+    } = this.props;
     const id = params.id;
     this.setState({ ready: 'loading' });
     axios({
       method: 'get',
       url: `https://api.airtable.com/v0/app0s53GIQZBB0T5d/Cuisines/${id}`,
-      headers: { Authorization: `Bearer keyhAAqvSVG6kZeVZ` },
+      headers: { Authorization: `Bearer keyhAAqvSVG6kZeVZ` }
     }).then(({ data }) => {
       this.setState({
         meal: data,
-        ready: 'loaded',
+        ready: 'loaded'
       });
     });
   }
@@ -152,15 +152,14 @@ class OrderPage extends Component {
       <Fragment>
         {/* <Header /> */}
         <Navbarb />
-        <hr className="line"></hr>
+        <hr className="line" />
         <OrderPageStyle>
           <Container>
-            { ready === 'loading' ? (<h1>Loading content...</h1>) : '' }
-            { ready === 'loaded' && (
+            {ready === 'loading' ? <h1>Loading content...</h1> : ''}
+            {ready === 'loaded' && (
               <Fragment>
                 <Grid>
-                  <Column columns="2">
-                  </Column>
+                  <Column columns="2" />
                   <Column columns="2">
                     <section>
                       <h1 className="name">{meal.fields.Name}</h1>
@@ -169,30 +168,54 @@ class OrderPage extends Component {
                 </Grid>
                 <Grid>
                   <Column columns="2">
-                    <img src={meal.fields.Icon[0].thumbnails.large.url}  alt="Meal" className="img" height="300"/>
+                    <img
+                      src={meal.fields.Icon[0].thumbnails.large.url}
+                      alt="Meal"
+                      className="img"
+                      height="300"
+                    />
                   </Column>
                   <Column columns="2">
                     <section className="right">
                       <h2 className="price">Price:{meal.fields.Price}</h2>
                       <ul>
-                        { meal.fields.Prices && meal.fields.Prices.map((prices, index) => (
-                          <li key={index}>{price}</li>
-                        )) }
+                        {meal.fields.Prices &&
+                          meal.fields.Prices.map((prices, index) => <li key={index}>{price}</li>)}
                       </ul>
                       <h3>Description</h3>
                       <p>{meal.fields.Description}</p>
                       <h4>Quantity</h4>
                       <div className="wrapper2">
-                          
-                          <div className="minus">
-                            <button className="btn3">-</button>
-                          </div>
-                          <div>{this.state.count}</div>
-                          <div className="plus">
-                            <button className="btn3">+</button>
-                          </div>
+                        <div className="minus">
+                          <button className="btn3">-</button>
+                        </div>
+                        <div>{this.state.count}</div>
+                        <div className="plus">
+                          <button className="btn3">+</button>
+                        </div>
                       </div>
-                      <button className="btn1"><img src={require('../../assets/basket.png')} alt="" height="21" width="21" /> Add to basket</button>
+                      <button
+                        className="btn1"
+                        onClick={() => {
+                          if (JSON.parse(localStorage.getItem('basketItems'))) {
+                            let basketItems = JSON.parse(localStorage.getItem('basketItems'));
+                            localStorage.removeItem('basketItems');
+                            basketItems.push(meal);
+                            localStorage.setItem('basketItems', JSON.stringify(basketItems));
+                          } else {
+                            let basketItems = [meal];
+                            localStorage.setItem('basketItems', JSON.stringify(basketItems));
+                          }
+                        }}
+                      >
+                        <img
+                          src={require('../../assets/basket.png')}
+                          alt=""
+                          height="21"
+                          width="21"
+                        />{' '}
+                        Add to basket
+                      </button>
                     </section>
                   </Column>
                 </Grid>
@@ -201,14 +224,15 @@ class OrderPage extends Component {
                     <Link to="/">
                       <button className="btn2">Back to Menu</button>
                     </Link>
-                  </div>     
-              <div className="right">
-              <button className="btn2" onClick = {this.sweetalertfunction}>Order Now</button>
-              </div>                        
-            </div>
+                  </div>
+                  <div className="right">
+                    <button className="btn2" onClick={this.sweetalertfunction}>
+                      Order Now
+                    </button>
+                  </div>
+                </div>
               </Fragment>
-            ) }
-            
+            )}
           </Container>
         </OrderPageStyle>
         <Footer />

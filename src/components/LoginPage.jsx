@@ -126,7 +126,7 @@ and (min-device-width : 768px) and (max-device-width : 1024px){
       border-top: none;
       border-bottom:
       width: 190px;
-      height: 20px;
+      height: 30px;
       color: black;
       font-size: 14px;
       font-weight: 600;

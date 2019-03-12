@@ -24,28 +24,16 @@ const Navgroup = styled.nav`
   }
   .wrapper2{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     margin-top: 13px;
     grid-gap: 8px;
   }
 
   .home{
-    margin-left: 30px;
+    margin-left: 400px;
     color: EA2027;
   }
 
-  .buttonb{
-    height: 34px;
-    width: 100px;
-    background-color: #fff;
-    color: #EA2027;
-    border: 0;
-    font-size: 12px;
-    border: 1px solid red;
-    font-weight: 600;
-    margin-top: 8px;
-    cursor: pointer;
-  }
   a{
     text-decoration: none;
     color: #EA2027;
@@ -111,10 +99,6 @@ const Navgroup = styled.nav`
     margin-top: -90px;
     margin-bottom:70px;
     padding-right: 220px;
-  }
-
-  .buttonb{
-   display: none;
   }
   
 .wrapper{
@@ -186,15 +170,9 @@ class Navbarc extends Component{
                 <Link to="/">
                   <p className="home">Home</p>
                 </Link>
-                <Link to="/feedback">
-                  <p>Feedback</p>
-                </Link>
                   <div className="res">
                   <Link to="/">
                     <h2>Home</h2>
-                  </Link>
-                  <Link to="/feedback">
-                    <h2>Feedback</h2>
                   </Link>
                   </div>
             </div>  

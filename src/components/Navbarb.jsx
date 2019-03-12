@@ -24,13 +24,12 @@ const Navgroup = styled.nav`
   }
   .wrapper2{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     margin-top: 13px;
-    grid-gap: 8px;
   }
 
   .home{
-    margin-left: 30px;
+    margin-left: 200px;
     color: EA2027;
   }
 
@@ -39,12 +38,13 @@ const Navgroup = styled.nav`
     width: 100px;
     background-color: #fff;
     color: #EA2027;
-    border: 0;
     font-size: 12px;
     border: 1px solid red;
     font-weight: 600;
     margin-top: 8px;
     cursor: pointer;
+    position: relative;
+    left: 90px;
   }
   a{
     text-decoration: none;
@@ -186,18 +186,12 @@ class Navbarb extends Component{
                 <Link to="/">
                   <p className="home">Home</p>
                 </Link>
-                <Link to="/feedback">
-                  <p>Feedback</p>
-                </Link>
                 <Link to="/basket">
             <button className="buttonb"><span><img src={require('../../assets/basket.png' )} alt="" height="21" width="21" /> Basket </span>
             </button></Link>
                   <div className="res">
                   <Link to="/">
                     <h2>Home</h2>
-                  </Link>
-                  <Link to="/feedback">
-                    <h2>Feedback</h2>
                   </Link>
                   <Link to="/basket">
                     <h2>Basket</h2>
